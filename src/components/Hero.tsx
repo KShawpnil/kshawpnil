@@ -22,18 +22,18 @@ export const Hero = () => {
             </svg>
           </div>
 
-          {/* Main Content - No Gaps */}
+          {/* Main Content - Tight Spacing */}
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[500px]">
             
             {/* Left - PORT */}
-            <div className="flex items-center justify-end animate-fade-in">
+            <div className="flex items-center justify-end animate-fade-in -mr-4 lg:-mr-8">
               <h2 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-accent/20 leading-none tracking-tight">
                 PORT
               </h2>
             </div>
 
             {/* Center - Image */}
-            <div className="flex flex-col items-center justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="flex flex-col items-center justify-center animate-fade-in z-10" style={{ animationDelay: "0.2s" }}>
               <div className="w-48 md:w-56 lg:w-64 mb-8">
                 <img 
                   src={profilePhoto} 
@@ -63,7 +63,7 @@ export const Hero = () => {
             </div>
 
             {/* Right - FOLIO */}
-            <div className="flex items-center justify-start animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <div className="flex items-center justify-start animate-fade-in -ml-4 lg:-ml-8" style={{ animationDelay: "0.1s" }}>
               <h2 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-accent/20 leading-none tracking-tight">
                 FOLIO
               </h2>

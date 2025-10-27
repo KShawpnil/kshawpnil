@@ -26,8 +26,8 @@ export const Hero = () => {
             </div>
 
             {/* Right - Title and Links */}
-            <div className="flex flex-col items-center lg:items-start animate-fade-in flex-1" style={{ animationDelay: "0.3s" }}>
-              <div className="mb-8">
+            <div className="flex flex-col items-center animate-fade-in flex-1" style={{ animationDelay: "0.3s" }}>
+              <div className="mb-8 text-center">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground italic tracking-tight leading-tight">
                   My
                 </h1>
@@ -40,7 +40,7 @@ export const Hero = () => {
               </div>
               
               {/* Social Links - Icons with Names Below */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-6">
+              <div className="flex flex-wrap justify-center gap-6">
                 <a href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="LinkedIn">
                   <Linkedin className="w-6 h-6 text-foreground" />
                   <span className="text-foreground font-medium text-xs">LinkedIn</span>

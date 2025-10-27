@@ -47,9 +47,6 @@ export const AwardsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
-              <Star className="w-8 h-8 text-accent" />
-            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Awards & Achievements
             </h2>
@@ -71,10 +68,6 @@ export const AwardsSection = () => {
                   
                   <div className="relative p-6 md:p-8">
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-7 h-7 text-accent" />
-                      </div>
-                      
                       <div className="flex-1 space-y-3">
                         <div>
                           <Badge className="mb-2 bg-accent/10 text-accent border-accent/20">

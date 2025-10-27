@@ -92,9 +92,6 @@ export const ProjectsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-              <Zap className="w-8 h-8 text-primary" />
-            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Undergraduate Projects
             </h2>
@@ -113,14 +110,9 @@ export const ProjectsSection = () => {
                 
                 <div className="relative p-6 flex flex-col h-full">
                   <div className="flex items-start gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <Lightbulb className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <Badge variant="secondary" className="mb-2">
-                        {project.category}
-                      </Badge>
-                    </div>
+                    <Badge variant="secondary" className="mb-2">
+                      {project.category}
+                    </Badge>
                   </div>
                   
                   <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">
@@ -150,7 +142,6 @@ export const ProjectsSection = () => {
                     
                     {project.achievement && (
                       <div className="flex items-start gap-2 p-3 bg-accent/10 rounded-lg border border-accent/20">
-                        <Trophy className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <p className="text-xs text-foreground font-medium leading-relaxed">
                           {project.achievement}
                         </p>

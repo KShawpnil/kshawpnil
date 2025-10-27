@@ -30,9 +30,6 @@ export const PublicationsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-4">
-              <FileText className="w-8 h-8 text-secondary" />
-            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Publications
             </h2>
@@ -51,12 +48,6 @@ export const PublicationsSection = () => {
                 
                 <div className="relative p-6 md:p-8">
                   <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <BookOpen className="w-7 h-7 text-secondary" />
-                      </div>
-                    </div>
-                    
                     <div className="flex-1 space-y-3">
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1">

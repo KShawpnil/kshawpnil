@@ -39,9 +39,6 @@ export const SkillsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-              <Sparkles className="w-8 h-8 text-primary" />
-            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Technical Skills
             </h2>
@@ -65,9 +62,6 @@ export const SkillsSection = () => {
                   
                   <div className="relative p-6 md:p-8 space-y-5">
                     <div className="flex items-center gap-4">
-                      <div className={`w-14 h-14 ${bgClass} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className={`w-7 h-7 ${colorClass}`} />
-                      </div>
                       <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                         {category.title}
                       </h3>

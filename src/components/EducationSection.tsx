@@ -1,81 +1,98 @@
 import { Card } from "@/components/ui/card";
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, MapPin, Calendar } from "lucide-react";
 
 export const EducationSection = () => {
+  const education = [
+    {
+      degree: "Bachelor of Science in Computer Science and Engineering",
+      institution: "United International University",
+      location: "Dhaka, Bangladesh",
+      period: "2020 - 2024",
+      major: "Software Engineering",
+      gradient: "from-primary/20 to-primary/5"
+    },
+    {
+      degree: "Higher Secondary School Certificate",
+      institution: "Birshreshtha Munshi Abdur Rouf Public College",
+      location: "Dhaka, Bangladesh",
+      period: "2017 - 2019",
+      gradient: "from-secondary/20 to-secondary/5"
+    },
+    {
+      degree: "Secondary School Certificate",
+      institution: "Dhanmondi Government Girls High School",
+      location: "Dhaka, Bangladesh",
+      period: "2016 - 2017",
+      gradient: "from-accent/20 to-accent/5"
+    }
+  ];
+
   return (
-    <section id="education" className="py-24 bg-background">
+    <section id="education" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+              <GraduationCap className="w-8 h-8 text-primary" />
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Academic Background
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              My educational journey in computer science and engineering
+            </p>
           </div>
           
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20"></div>
-            
-            <div className="space-y-8">
-              <div className="relative pl-20">
-                <div className="absolute left-6 top-6 w-5 h-5 bg-primary rounded-full border-4 border-background shadow-md"></div>
-                <Card className="p-6 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between flex-wrap gap-2 mb-2">
-                        <h3 className="font-semibold text-xl text-foreground">Bachelor of Science in Computer Science and Engineering</h3>
-                        <span className="text-sm text-muted-foreground">2020 - 2024</span>
+          <div className="grid gap-6 md:gap-8">
+            {education.map((edu, index) => (
+              <Card 
+                key={index}
+                className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-elegant"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${edu.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                
+                <div className="relative p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <GraduationCap className="w-8 h-8 text-primary-foreground" />
                       </div>
-                      <p className="text-primary font-medium mb-2">United International University</p>
-                      <p className="text-muted-foreground mb-2">Dhaka, Bangladesh</p>
-                      <p className="text-foreground"><span className="font-medium">Major:</span> Software Engineering</p>
+                    </div>
+                    
+                    <div className="flex-1 space-y-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                        <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                          {edu.degree}
+                        </h3>
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <Calendar className="w-4 h-4" />
+                          <span className="text-sm font-medium whitespace-nowrap">{edu.period}</span>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <p className="text-lg font-semibold text-primary">
+                          {edu.institution}
+                        </p>
+                        
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <MapPin className="w-4 h-4" />
+                          <span className="text-sm">{edu.location}</span>
+                        </div>
+                        
+                        {edu.major && (
+                          <div className="pt-2">
+                            <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                              Major: {edu.major}
+                            </span>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </Card>
-              </div>
-              
-              <div className="relative pl-20">
-                <div className="absolute left-6 top-6 w-5 h-5 bg-primary/60 rounded-full border-4 border-background shadow-md"></div>
-                <Card className="p-6 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between flex-wrap gap-2 mb-2">
-                        <h3 className="font-semibold text-xl text-foreground">Higher Secondary School Certificate</h3>
-                        <span className="text-sm text-muted-foreground">2017 - 2019</span>
-                      </div>
-                      <p className="text-primary font-medium mb-2">Birshreshtha Munshi Abdur Rouf Public College</p>
-                      <p className="text-muted-foreground">Dhaka, Bangladesh</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-              
-              <div className="relative pl-20">
-                <div className="absolute left-6 top-6 w-5 h-5 bg-primary/40 rounded-full border-4 border-background shadow-md"></div>
-                <Card className="p-6 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between flex-wrap gap-2 mb-2">
-                        <h3 className="font-semibold text-xl text-foreground">Secondary School Certificate</h3>
-                        <span className="text-sm text-muted-foreground">2016 - 2017</span>
-                      </div>
-                      <p className="text-primary font-medium mb-2">Dhanmondi Government Girls High School</p>
-                      <p className="text-muted-foreground">Dhaka, Bangladesh</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </div>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

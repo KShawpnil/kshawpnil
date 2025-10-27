@@ -65,22 +65,34 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-12 right-8 w-28 h-24 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "1s" }}>
-                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 mb-2">
-                    <Globe className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="flex gap-1.5 justify-center mt-2">
-                    <div className="w-2 h-2 bg-primary/50 rounded-full"></div>
-                    <div className="w-2 h-2 bg-primary/40 rounded-full"></div>
-                    <div className="w-2 h-2 bg-primary/30 rounded-full"></div>
+                <div className="absolute bottom-14 right-12 w-28 h-24 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform flex flex-col items-center justify-center" style={{ animationDelay: "1s" }}>
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
+                    <Globe className="w-6 h-6 text-primary" />
                   </div>
                 </div>
 
-                {/* Small decorative dots */}
+                {/* Small decorative dots and stars */}
                 <div className="absolute top-1/4 left-28 w-2.5 h-2.5 bg-accent rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.5s" }}></div>
                 <div className="absolute top-1/3 right-32 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.7s" }}></div>
                 <div className="absolute bottom-1/3 left-32 w-2 h-2 bg-secondary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.9s" }}></div>
                 <div className="absolute bottom-1/4 right-28 w-1.5 h-1.5 bg-accent/70 rounded-full animate-pulse shadow-lg" style={{ animationDelay: "1.1s" }}></div>
+                
+                {/* Star shapes */}
+                <svg className="absolute top-20 left-24 w-4 h-4 text-accent animate-pulse" style={{ animationDelay: "0.6s" }} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+                </svg>
+                <svg className="absolute top-1/3 left-20 w-3 h-3 text-primary/70 animate-pulse" style={{ animationDelay: "0.8s" }} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+                </svg>
+                <svg className="absolute bottom-24 left-20 w-3.5 h-3.5 text-secondary animate-pulse" style={{ animationDelay: "1s" }} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+                </svg>
+                <svg className="absolute top-24 right-20 w-3 h-3 text-accent/80 animate-pulse" style={{ animationDelay: "0.7s" }} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+                </svg>
+                <svg className="absolute bottom-28 right-24 w-3.5 h-3.5 text-primary animate-pulse" style={{ animationDelay: "1.2s" }} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+                </svg>
               </div>
             </div>
 

@@ -196,7 +196,7 @@ export const Hero = () => {
                   size="lg" 
                   className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 >
-                  See My Work
+                  Explore My Work
                   <ArrowDown className="ml-2 w-5 h-5" />
                 </Button>
               </div>

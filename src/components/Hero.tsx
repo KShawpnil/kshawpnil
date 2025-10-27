@@ -116,7 +116,7 @@ export const Hero = () => {
                   Kazi Shawpnil
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                  Shaping ideas today for a better tomorrow.
+                  Creating. Learning. Growing.
                 </p>
               </div>
 

@@ -45,20 +45,6 @@ export const Hero = () => {
                 Computer Science Researcher & Educator
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-accent" />
-                  <span>Columbus, Ohio, USA</span>
-                </div>
-                <div className="hidden sm:block">•</div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-5 h-5 text-accent" />
-                  <a href="mailto:kshawpnil@gmail.com" className="hover:text-accent transition-colors">
-                    kshawpnil@gmail.com
-                  </a>
-                </div>
-              </div>
-              
               {/* Social Links */}
               <div className="flex items-center justify-center lg:justify-start gap-4">
                 <a 

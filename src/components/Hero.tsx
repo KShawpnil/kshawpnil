@@ -12,7 +12,7 @@ export const Hero = () => {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 min-h-[400px]">
             
             {/* Left - Image with Shape */}
-            <div className="flex items-center justify-center lg:justify-start animate-fade-in lg:self-center" style={{ animationDelay: "0.2s" }}>
+            <div className="flex items-center justify-center lg:justify-start lg:pl-8 animate-fade-in lg:self-center" style={{ animationDelay: "0.2s" }}>
               <div className="relative w-48 md:w-56 lg:w-64">
                 <div className="absolute inset-0 bg-accent/10 rounded-full blur-2xl"></div>
                 <div className="relative rounded-full overflow-hidden border-4 border-accent/20 shadow-2xl">
@@ -26,7 +26,7 @@ export const Hero = () => {
             </div>
 
             {/* Right - Title and Links */}
-            <div className="flex flex-col items-center lg:items-start lg:pl-12 animate-fade-in flex-1" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col items-center lg:items-start lg:pl-20 animate-fade-in flex-1" style={{ animationDelay: "0.3s" }}>
               <div className="mb-8">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground italic tracking-tight leading-tight">
                   My

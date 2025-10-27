@@ -16,8 +16,8 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: "About", href: "#about" },
-    { name: "Academic Background", href: "#education" },
-    { name: "Work Experiences", href: "#experience" },
+    { name: "Education", href: "#education" },
+    { name: "Experience", href: "#experience" },
     { name: "Research", href: "#research" },
     { name: "Publications", href: "#publications" },
     { name: "Projects", href: "#projects" },
@@ -51,9 +51,9 @@ export const Navbar = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="font-serif text-2xl font-bold transition-all duration-300 relative group text-foreground"
+            className="font-serif text-3xl font-bold transition-all duration-300 relative group text-foreground tracking-wider"
           >
-            Kazi Shawpnil
+            KS
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </a>
 

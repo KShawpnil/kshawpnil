@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export const PublicationsSection = () => {
   const publications = [
     {
-      title: "Easye-waste: A novel approach toward efficient and sustainable e-waste management",
+      title: "EasyE-Waste: A Novel Approach Toward Efficient and Sustainable E-Waste Management",
       authors: "Shawpnil, K., Nayeem, S., Hossain, F., Dayan, A., & Islam, M. M.",
       venue: "International Conference on Intelligent Sustainable Systems",
       publisher: "Springer Nature Singapore",

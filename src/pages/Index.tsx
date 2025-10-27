@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Hero } from "@/components/Hero";
+import { ResearchSection } from "@/components/ResearchSection";
+import { EducationSection } from "@/components/EducationSection";
+import { PublicationsSection } from "@/components/PublicationsSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
+import { AwardsSection } from "@/components/AwardsSection";
+import { SkillsSection } from "@/components/SkillsSection";
+import { ContactSection } from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="font-sans">
+      <Hero />
+      <ResearchSection />
+      <EducationSection />
+      <PublicationsSection />
+      <ProjectsSection />
+      <ExperienceSection />
+      <AwardsSection />
+      <SkillsSection />
+      <ContactSection />
+      
+      <footer className="bg-primary text-primary-foreground py-8">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Kazi Shawpnil. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
   );
 };
 

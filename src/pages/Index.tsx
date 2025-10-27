@@ -17,8 +17,8 @@ const Index = () => {
       <ExperienceSection />
       <PublicationsSection />
       <ProjectsSection />
-      <AwardsSection />
       <SkillsSection />
+      <AwardsSection />
       <ContactSection />
       
       <footer className="bg-primary text-primary-foreground py-8">

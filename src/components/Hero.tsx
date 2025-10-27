@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Github, Linkedin, Youtube, GraduationCap, BookOpen } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo.png";
 
 export const Hero = () => {
   return (
@@ -11,15 +11,12 @@ export const Hero = () => {
             
             {/* Image Section */}
             <div className="relative flex justify-center lg:justify-start animate-fade-in">
-              {/* Circular profile image */}
-              <div className="relative z-10 w-72 h-72 md:w-80 md:h-80">
-                <div className="w-full h-full rounded-full overflow-hidden border-8 border-background">
-                  <img 
-                    src={profilePhoto} 
-                    alt="Kazi Shawpnil"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="w-72 md:w-80 lg:w-96">
+                <img 
+                  src={profilePhoto} 
+                  alt="Kazi Shawpnil"
+                  className="w-full h-auto"
+                />
               </div>
             </div>
 

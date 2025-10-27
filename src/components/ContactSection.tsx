@@ -59,33 +59,6 @@ export const ContactSection = () => {
               </a>
             </Button>
           </div>
-          
-          <div className="flex items-center justify-center gap-6 pt-8 border-t">
-            <a 
-              href="https://github.com/kazishawpnil" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-all hover:scale-110"
-            >
-              <Github className="w-6 h-6" />
-            </a>
-            <a 
-              href="https://scholar.google.com/citations?user=BEm3vG0AAAAJ&hl=en" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-all hover:scale-110"
-            >
-              <ExternalLink className="w-6 h-6" />
-            </a>
-            <a 
-              href="https://youtube.com/@everydayelearning" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-all hover:scale-110"
-            >
-              <Youtube className="w-6 h-6" />
-            </a>
-          </div>
         </div>
       </div>
     </section>

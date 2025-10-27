@@ -65,9 +65,9 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-14 right-12 w-28 h-24 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform flex flex-col items-center justify-center" style={{ animationDelay: "1s" }}>
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
-                    <Globe className="w-6 h-6 text-primary" />
+                <div className="absolute bottom-14 right-12 w-28 h-24 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "1s" }}>
+                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 mb-2">
+                    <Globe className="w-5 h-5 text-primary" />
                   </div>
                 </div>
 

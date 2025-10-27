@@ -45,13 +45,13 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                <div className="absolute top-12 right-16 w-28 h-28 bg-accent/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-accent/30 shadow-lg hover:scale-105 transition-transform flex flex-col items-center justify-center" style={{ animationDelay: "0.6s" }}>
+                <div className="absolute top-12 right-16 w-28 h-28 bg-accent/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-accent/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "0.6s" }}>
                   <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-2">
                     <Cpu className="w-7 h-7 text-accent" />
                   </div>
                   <div className="space-y-1 w-full">
                     <div className="h-1 bg-accent/30 rounded-full w-full"></div>
-                    <div className="h-1 bg-accent/20 rounded-full w-3/4 mx-auto"></div>
+                    <div className="h-1 bg-accent/20 rounded-full w-3/4"></div>
                   </div>
                 </div>
 

@@ -22,11 +22,11 @@ export const Hero = () => {
             </svg>
           </div>
 
-          {/* Main Content - Three Column Layout */}
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-0 items-center justify-items-center min-h-[500px]">
+          {/* Main Content - Compact Layout */}
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 min-h-[500px]">
             
             {/* Left - PORT */}
-            <div className="flex items-center justify-end w-full animate-fade-in pr-2">
+            <div className="flex items-center justify-end animate-fade-in">
               <h2 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-accent/20 leading-none tracking-tight">
                 PORT
               </h2>
@@ -63,7 +63,7 @@ export const Hero = () => {
             </div>
 
             {/* Right - FOLIO */}
-            <div className="flex items-center justify-start w-full animate-fade-in pl-2" style={{ animationDelay: "0.1s" }}>
+            <div className="flex items-center justify-start animate-fade-in" style={{ animationDelay: "0.1s" }}>
               <h2 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-accent/20 leading-none tracking-tight">
                 FOLIO
               </h2>

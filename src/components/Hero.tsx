@@ -19,43 +19,8 @@ export const Hero = () => {
             <div className="relative flex items-center justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="relative w-full max-w-md aspect-square">
                 
-                {/* Floating Decorative Cards */}
-                <div className="absolute top-0 left-0 w-32 h-24 bg-primary/10 backdrop-blur-sm rounded-xl p-3 animate-fade-in border border-primary/20" style={{ animationDelay: "0.4s" }}>
-                  <Code2 className="w-6 h-6 text-primary mb-2" />
-                  <div className="space-y-1">
-                    <div className="h-1.5 bg-primary/30 rounded w-full"></div>
-                    <div className="h-1.5 bg-primary/20 rounded w-3/4"></div>
-                    <div className="h-1.5 bg-primary/20 rounded w-1/2"></div>
-                  </div>
-                </div>
-
-                <div className="absolute top-4 right-0 w-32 h-24 bg-accent/10 backdrop-blur-sm rounded-xl p-3 animate-fade-in border border-accent/20" style={{ animationDelay: "0.6s" }}>
-                  <Cpu className="w-8 h-8 text-accent mx-auto" />
-                  <div className="mt-2 space-y-1">
-                    <div className="h-1 bg-accent/30 rounded w-full"></div>
-                    <div className="h-1 bg-accent/30 rounded w-full"></div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-0 left-4 w-28 h-20 bg-secondary/10 backdrop-blur-sm rounded-xl p-3 animate-fade-in border border-secondary/20" style={{ animationDelay: "0.8s" }}>
-                  <Database className="w-6 h-6 text-secondary mb-1" />
-                  <div className="space-y-1">
-                    <div className="h-1.5 bg-secondary/30 rounded w-full"></div>
-                    <div className="h-1.5 bg-secondary/20 rounded w-2/3"></div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-8 right-4 w-28 h-20 bg-primary/10 backdrop-blur-sm rounded-xl p-3 animate-fade-in border border-primary/20" style={{ animationDelay: "1s" }}>
-                  <Globe className="w-6 h-6 text-primary mb-1" />
-                  <div className="flex gap-1 mt-2">
-                    <div className="w-2 h-2 bg-primary/40 rounded-full"></div>
-                    <div className="w-2 h-2 bg-primary/40 rounded-full"></div>
-                    <div className="w-2 h-2 bg-primary/40 rounded-full"></div>
-                  </div>
-                </div>
-
                 {/* Central Profile Photo */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fade-in z-10" style={{ animationDelay: "0.3s" }}>
                   <div className="relative w-56 h-56">
                     <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
                     <div className="relative rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl bg-primary/5">
@@ -68,10 +33,54 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                {/* Small decorative elements */}
-                <div className="absolute top-1/4 left-8 w-3 h-3 bg-accent rounded-full animate-pulse" style={{ animationDelay: "0.5s" }}></div>
-                <div className="absolute top-1/3 right-12 w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: "0.7s" }}></div>
-                <div className="absolute bottom-1/4 left-16 w-2 h-2 bg-secondary rounded-full animate-pulse" style={{ animationDelay: "0.9s" }}></div>
+                {/* Floating Decorative Cards - Closer to image */}
+                <div className="absolute top-8 left-4 w-32 h-28 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "0.4s" }}>
+                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 mb-2">
+                    <Code2 className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="h-1.5 bg-primary/30 rounded-full w-full"></div>
+                    <div className="h-1.5 bg-primary/20 rounded-full w-3/4"></div>
+                    <div className="h-1.5 bg-primary/15 rounded-full w-1/2"></div>
+                  </div>
+                </div>
+
+                <div className="absolute top-4 right-8 w-28 h-28 bg-accent/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-accent/30 shadow-lg hover:scale-105 transition-transform flex flex-col items-center justify-center" style={{ animationDelay: "0.6s" }}>
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-2">
+                    <Cpu className="w-7 h-7 text-accent" />
+                  </div>
+                  <div className="space-y-1 w-full">
+                    <div className="h-1 bg-accent/30 rounded-full w-full"></div>
+                    <div className="h-1 bg-accent/20 rounded-full w-3/4 mx-auto"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-12 left-8 w-28 h-24 bg-secondary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-secondary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "0.8s" }}>
+                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-secondary/10 mb-2">
+                    <Database className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="h-1.5 bg-secondary/30 rounded-full w-full"></div>
+                    <div className="h-1.5 bg-secondary/20 rounded-full w-2/3"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-8 right-12 w-28 h-24 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "1s" }}>
+                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 mb-2">
+                    <Globe className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="flex gap-1.5 justify-center mt-2">
+                    <div className="w-2 h-2 bg-primary/50 rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary/40 rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary/30 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Small decorative dots */}
+                <div className="absolute top-1/4 left-20 w-2.5 h-2.5 bg-accent rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.5s" }}></div>
+                <div className="absolute top-1/3 right-24 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.7s" }}></div>
+                <div className="absolute bottom-1/3 left-24 w-2 h-2 bg-secondary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.9s" }}></div>
+                <div className="absolute bottom-1/4 right-20 w-1.5 h-1.5 bg-accent/70 rounded-full animate-pulse shadow-lg" style={{ animationDelay: "1.1s" }}></div>
               </div>
             </div>
 

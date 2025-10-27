@@ -22,10 +22,10 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     --primary-light: 217 91% 85%;
     
-    /* Deep Teal Border */
-    --secondary: 183 77% 28%;
-    --secondary-foreground: 183 77% 28%;
-    --secondary-light: 183 77% 95%;
+    /* Teal Accent */
+    --secondary: 187 85% 43%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 187 85% 90%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
@@ -69,8 +69,8 @@ All colors MUST be HSL.
     --primary: 217 91% 65%;
     --primary-foreground: 222 47% 11%;
 
-    --secondary: 183 77% 42%;
-    --secondary-foreground: 183 77% 42%;
+    --secondary: 187 85% 48%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;

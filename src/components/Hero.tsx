@@ -26,7 +26,7 @@ export const Hero = () => {
             </div>
 
             {/* Right - Title and Links */}
-            <div className="flex flex-col items-center lg:items-start animate-fade-in flex-1" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col items-center lg:items-start lg:pl-12 animate-fade-in flex-1" style={{ animationDelay: "0.3s" }}>
               <div className="mb-8">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground italic tracking-tight leading-tight">
                   My

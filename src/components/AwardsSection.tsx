@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Trophy, Award, Medal } from "lucide-react";
+import { Trophy, Award, Medal, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const AwardsSection = () => {
   const awards = [
@@ -16,6 +17,7 @@ export const AwardsSection = () => {
       organization: "Indian Institute of Technology Kanpur, India",
       period: "2023",
       type: "competition",
+      link: "https://drive.google.com/file/d/1s5izywClsBl9Uv_Zi_pic_UVYEQVzk3T/view?usp=sharing",
     },
     {
       icon: Medal,
@@ -23,6 +25,7 @@ export const AwardsSection = () => {
       organization: "CSE Project Show, Spring 2022, UIU",
       period: "2022",
       type: "competition",
+      link: "https://drive.google.com/file/d/15XwPVG73Zxq3LM0Vkc6gtF-k1UfggFPQ/view?usp=sharing",
     },
     {
       icon: Medal,
@@ -30,6 +33,7 @@ export const AwardsSection = () => {
       organization: "CSE Project Show, Summer 2022, UIU",
       period: "2022",
       type: "competition",
+      link: "https://drive.google.com/file/d/1LhHdh1SpAhoBTYK16YFlfFf0H92BATuH/view?usp=sharing",
     },
   ];
 
@@ -60,6 +64,13 @@ export const AwardsSection = () => {
                       <p className="text-muted-foreground text-sm mb-1">{award.organization}</p>
                       <p className="text-accent font-medium text-sm">{award.period}</p>
                     </div>
+                    {award.link && (
+                      <Button variant="ghost" size="icon" className="flex-shrink-0" asChild>
+                        <a href={award.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </Card>
               );

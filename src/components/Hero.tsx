@@ -69,6 +69,10 @@ export const Hero = () => {
                   <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 mb-2">
                     <Globe className="w-5 h-5 text-primary" />
                   </div>
+                  <div className="space-y-1.5">
+                    <div className="h-1.5 bg-primary/30 rounded-full w-full"></div>
+                    <div className="h-1.5 bg-primary/20 rounded-full w-2/3"></div>
+                  </div>
                 </div>
 
                 {/* Small decorative dots and stars */}

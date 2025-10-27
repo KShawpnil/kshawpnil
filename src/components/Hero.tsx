@@ -42,21 +42,21 @@ export const Hero = () => {
                   <Linkedin className="w-6 h-6 text-foreground" />
                   <span className="text-foreground font-medium text-xs">LinkedIn</span>
                 </a>
+                <a href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="ResearchGate">
+                  <BookOpen className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground font-medium text-xs">ResearchGate</span>
+                </a>
                 <a href="https://github.com/KShawpnil" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="GitHub">
                   <Github className="w-6 h-6 text-foreground" />
                   <span className="text-foreground font-medium text-xs">GitHub</span>
-                </a>
-                <a href="https://www.youtube.com/@EverydayELearning24" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="YouTube">
-                  <Youtube className="w-6 h-6 text-foreground" />
-                  <span className="text-foreground font-medium text-xs">YouTube</span>
                 </a>
                 <a href="https://orcid.org/0000-0002-5063-7996" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="ORCiD">
                   <GraduationCap className="w-6 h-6 text-foreground" />
                   <span className="text-foreground font-medium text-xs">ORCiD</span>
                 </a>
-                <a href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="ResearchGate">
-                  <BookOpen className="w-6 h-6 text-foreground" />
-                  <span className="text-foreground font-medium text-xs">ResearchGate</span>
+                <a href="https://www.youtube.com/@EverydayELearning24" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="YouTube">
+                  <Youtube className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground font-medium text-xs">YouTube</span>
                 </a>
               </div>
             </div>

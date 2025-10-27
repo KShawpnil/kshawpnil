@@ -1,11 +1,12 @@
 import { Hero } from "@/components/Hero";
-import { ResearchSection } from "@/components/ResearchSection";
+import { AboutSection } from "@/components/AboutSection";
 import { EducationSection } from "@/components/EducationSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
+import { ResearchSection } from "@/components/ResearchSection";
 import { PublicationsSection } from "@/components/PublicationsSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
-import { ExperienceSection } from "@/components/ExperienceSection";
-import { AwardsSection } from "@/components/AwardsSection";
 import { SkillsSection } from "@/components/SkillsSection";
+import { AwardsSection } from "@/components/AwardsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Navbar } from "@/components/Navbar";
 
@@ -14,9 +15,10 @@ const Index = () => {
     <main className="font-sans">
       <Navbar />
       <Hero />
-      <ResearchSection />
+      <AboutSection />
       <EducationSection />
       <ExperienceSection />
+      <ResearchSection />
       <PublicationsSection />
       <ProjectsSection />
       <SkillsSection />

@@ -93,7 +93,7 @@ export const ProjectsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Featured Projects
+              Undergraduate Projects
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
             <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">

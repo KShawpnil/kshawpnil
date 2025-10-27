@@ -15,9 +15,10 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: "About", href: "#about" },
+    { name: "Academic Background", href: "#education" },
+    { name: "Work Experiences", href: "#experience" },
     { name: "Research", href: "#research" },
-    { name: "Education", href: "#education" },
-    { name: "Experience", href: "#experience" },
     { name: "Publications", href: "#publications" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },

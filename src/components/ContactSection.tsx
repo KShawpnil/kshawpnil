@@ -7,7 +7,7 @@ export const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Get In Touch
+            Contact Me
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">

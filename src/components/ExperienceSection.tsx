@@ -73,12 +73,19 @@ export const ExperienceSection = () => {
                   
                   <div className="relative p-6 md:p-8">
                     <div className="flex flex-col md:flex-row gap-6">
+                      <div className="flex-shrink-0">
+                        <div className={`w-16 h-16 rounded-xl ${bgClass} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          <Icon className={`w-8 h-8 ${colorClass}`} />
+                        </div>
+                      </div>
+                      
                       <div className="flex-1 space-y-3">
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                           <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                             {exp.title}
                           </h3>
                           <div className="flex items-center gap-2 text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
                             <span className="text-sm font-medium whitespace-nowrap">{exp.period}</span>
                           </div>
                         </div>
@@ -89,6 +96,7 @@ export const ExperienceSection = () => {
                           </p>
                           
                           <div className="flex items-center gap-2 text-muted-foreground">
+                            <MapPin className="w-4 h-4" />
                             <span className="text-sm">{exp.location}</span>
                           </div>
                           

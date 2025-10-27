@@ -54,6 +54,9 @@ export const ResearchSection = () => {
                   <div className={`absolute inset-0 bg-gradient-to-br ${area.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
                   <div className="relative p-6 space-y-4">
+                    <div className={`w-14 h-14 rounded-xl ${bgClass} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className={`w-7 h-7 ${colorClass}`} />
+                    </div>
                     <h3 className="font-serif text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {area.title}
                     </h3>
@@ -71,6 +74,12 @@ export const ResearchSection = () => {
             
             <div className="relative p-8 md:p-10">
               <div className="flex flex-col md:flex-row gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-xl bg-secondary/10 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <GraduationCap className="w-8 h-8 text-secondary" />
+                  </div>
+                </div>
+                
                 <div className="flex-1 space-y-4">
                   <div>
                     <Badge className="mb-3 bg-secondary/10 text-secondary border-secondary/20">

@@ -48,6 +48,12 @@ export const PublicationsSection = () => {
                 
                 <div className="relative p-6 md:p-8">
                   <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <BookOpen className="w-7 h-7 text-secondary" />
+                      </div>
+                    </div>
+                    
                     <div className="flex-1 space-y-3">
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1">

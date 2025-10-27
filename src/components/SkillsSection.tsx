@@ -62,6 +62,9 @@ export const SkillsSection = () => {
                   
                   <div className="relative p-6 md:p-8 space-y-5">
                     <div className="flex items-center gap-4">
+                      <div className={`w-14 h-14 ${bgClass} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className={`w-7 h-7 ${colorClass}`} />
+                      </div>
                       <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                         {category.title}
                       </h3>

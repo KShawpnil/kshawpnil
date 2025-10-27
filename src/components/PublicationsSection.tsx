@@ -11,6 +11,7 @@ export const PublicationsSection = () => {
       publisher: "Springer Nature Singapore",
       year: "2023",
       pages: "pp. 557-571",
+      link: "https://link.springer.com/chapter/10.1007/978-981-99-1726-6_43",
     },
     {
       title: "A statistical synopsis of COVID-19 components and descriptive analysis of their socio-economic and healthcare aspects in Bangladesh perspective",
@@ -61,9 +62,17 @@ export const PublicationsSection = () => {
                       )}
                     </div>
                   </div>
-                  <Button variant="ghost" size="icon" className="flex-shrink-0">
-                    <ExternalLink className="w-4 h-4" />
-                  </Button>
+                  {pub.link ? (
+                    <Button variant="ghost" size="icon" className="flex-shrink-0" asChild>
+                      <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button variant="ghost" size="icon" className="flex-shrink-0">
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}
                 </div>
               </Card>
             ))}

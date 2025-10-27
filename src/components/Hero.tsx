@@ -75,26 +75,34 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                {/* Small decorative dots and stars */}
-                <div className="absolute top-1/4 left-28 w-2.5 h-2.5 bg-accent rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.5s" }}></div>
-                <div className="absolute top-1/3 right-32 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.7s" }}></div>
-                <div className="absolute bottom-1/3 left-32 w-2 h-2 bg-secondary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.9s" }}></div>
-                <div className="absolute bottom-1/4 right-28 w-1.5 h-1.5 bg-accent/70 rounded-full animate-pulse shadow-lg" style={{ animationDelay: "1.1s" }}></div>
+                {/* Small decorative dots and stars scattered around */}
+                <div className="absolute top-8 left-6 w-2.5 h-2.5 bg-accent rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.5s" }}></div>
+                <div className="absolute top-16 right-8 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.7s" }}></div>
+                <div className="absolute bottom-24 left-10 w-2 h-2 bg-secondary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.9s" }}></div>
+                <div className="absolute bottom-32 right-6 w-1.5 h-1.5 bg-accent/70 rounded-full animate-pulse shadow-lg" style={{ animationDelay: "1.1s" }}></div>
+                <div className="absolute top-32 left-4 w-2 h-2 bg-primary/60 rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.65s" }}></div>
+                <div className="absolute bottom-12 left-20 w-1.5 h-1.5 bg-accent rounded-full animate-pulse shadow-lg" style={{ animationDelay: "1.3s" }}></div>
                 
-                {/* Star shapes */}
-                <svg className="absolute top-20 left-24 w-4 h-4 text-accent animate-pulse" style={{ animationDelay: "0.6s" }} viewBox="0 0 24 24" fill="currentColor">
+                {/* Star shapes scattered around */}
+                <svg className="absolute top-12 left-16 w-4 h-4 text-accent animate-pulse" style={{ animationDelay: "0.6s" }} viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
                 </svg>
-                <svg className="absolute top-1/3 left-20 w-3 h-3 text-primary/70 animate-pulse" style={{ animationDelay: "0.8s" }} viewBox="0 0 24 24" fill="currentColor">
+                <svg className="absolute top-28 left-2 w-3 h-3 text-primary/70 animate-pulse" style={{ animationDelay: "0.8s" }} viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
                 </svg>
-                <svg className="absolute bottom-24 left-20 w-3.5 h-3.5 text-secondary animate-pulse" style={{ animationDelay: "1s" }} viewBox="0 0 24 24" fill="currentColor">
+                <svg className="absolute bottom-16 left-4 w-3.5 h-3.5 text-secondary animate-pulse" style={{ animationDelay: "1s" }} viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
                 </svg>
-                <svg className="absolute top-24 right-20 w-3 h-3 text-accent/80 animate-pulse" style={{ animationDelay: "0.7s" }} viewBox="0 0 24 24" fill="currentColor">
+                <svg className="absolute top-20 right-4 w-3 h-3 text-accent/80 animate-pulse" style={{ animationDelay: "0.7s" }} viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
                 </svg>
-                <svg className="absolute bottom-28 right-24 w-3.5 h-3.5 text-primary animate-pulse" style={{ animationDelay: "1.2s" }} viewBox="0 0 24 24" fill="currentColor">
+                <svg className="absolute bottom-20 right-2 w-3.5 h-3.5 text-primary animate-pulse" style={{ animationDelay: "1.2s" }} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+                </svg>
+                <svg className="absolute top-6 right-20 w-3 h-3 text-secondary/70 animate-pulse" style={{ animationDelay: "0.9s" }} viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+                </svg>
+                <svg className="absolute bottom-8 left-28 w-2.5 h-2.5 text-primary/80 animate-pulse" style={{ animationDelay: "1.1s" }} viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
                 </svg>
               </div>

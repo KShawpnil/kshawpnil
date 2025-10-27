@@ -25,9 +25,9 @@ const Index = () => {
       <AwardsSection />
       <ContactSection />
       
-      <footer className="bg-primary text-primary-foreground py-8">
+      <footer className="bg-muted/30 py-8 border-t border-border">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-sm">
+          <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Kazi Shawpnil. All rights reserved.
           </p>
         </div>

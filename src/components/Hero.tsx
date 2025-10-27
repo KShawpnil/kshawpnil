@@ -25,7 +25,7 @@ export const Hero = () => {
               
               {/* Circular profile image */}
               <div className="relative z-10 w-72 h-72 md:w-80 md:h-80">
-                <div className="w-full h-full rounded-full overflow-hidden border-8 border-background shadow-2xl">
+                <div className="w-full h-full rounded-full overflow-hidden border-8 border-background">
                   <img 
                     src={profilePhoto} 
                     alt="Kazi Shawpnil"

@@ -31,9 +31,12 @@ export const Hero = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground italic tracking-tight leading-tight">
                   My
                 </h1>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground italic tracking-tight leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground italic tracking-tight leading-tight mb-4">
                   Portfolio
                 </h1>
+                <p className="text-xl md:text-2xl font-semibold text-muted-foreground">
+                  Kazi Shawpnil
+                </p>
               </div>
               
               {/* Social Links - Icons with Names Below */}

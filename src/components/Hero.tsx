@@ -137,7 +137,7 @@ export const Hero = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/30 hover:scale-105"
                   aria-label="LinkedIn Profile"
                 >
-                  <Linkedin className="w-4 h-4 text-foreground" />
+                  <Linkedin className="w-4 h-4" style={{ color: '#0A66C2' }} />
                   <span className="text-sm font-medium text-foreground">LinkedIn</span>
                 </a>
                 <a 
@@ -147,7 +147,7 @@ export const Hero = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/30 hover:scale-105"
                   aria-label="GitHub Profile"
                 >
-                  <Github className="w-4 h-4 text-foreground" />
+                  <Github className="w-4 h-4" style={{ color: '#333333' }} />
                   <span className="text-sm font-medium text-foreground">GitHub</span>
                 </a>
                 <a 
@@ -157,7 +157,7 @@ export const Hero = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/30 hover:scale-105"
                   aria-label="ResearchGate Profile"
                 >
-                  <img src={researchGateLogo} alt="ResearchGate" className="w-5 h-5" />
+                  <img src={researchGateLogo} alt="ResearchGate" className="w-5 h-5" style={{ filter: 'invert(48%) sepia(79%) saturate(2476%) hue-rotate(142deg) brightness(97%) contrast(101%)' }} />
                   <span className="text-sm font-medium text-foreground">ResearchGate</span>
                 </a>
                 <a 
@@ -184,7 +184,7 @@ export const Hero = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/30 hover:scale-105"
                   aria-label="YouTube Channel"
                 >
-                  <Youtube className="w-4 h-4 text-foreground" />
+                  <Youtube className="w-4 h-4" style={{ color: '#FF0000' }} />
                   <span className="text-sm font-medium text-foreground">YouTube</span>
                 </a>
               </div>

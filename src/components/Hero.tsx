@@ -22,8 +22,8 @@ export const Hero = () => {
             </svg>
           </div>
 
-          {/* Main Content - Compact Layout */}
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 min-h-[500px]">
+          {/* Main Content - No Gaps */}
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[500px]">
             
             {/* Left - PORT */}
             <div className="flex items-center justify-end animate-fade-in">

@@ -38,8 +38,8 @@ export const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/98 backdrop-blur-xl shadow-sm border-b border-border/50"
-          : "bg-gradient-to-b from-black/20 to-transparent"
+          ? "bg-primary/95 backdrop-blur-xl shadow-lg border-b border-primary-foreground/10"
+          : "bg-primary/90 backdrop-blur-md shadow-md"
       }`}
     >
       <div className="container mx-auto px-6">
@@ -51,16 +51,10 @@ export const Navbar = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className={`font-serif text-2xl font-bold transition-all duration-300 relative group ${
-              isScrolled
-                ? "text-foreground"
-                : "text-primary-foreground"
-            }`}
+            className="font-serif text-2xl font-bold transition-all duration-300 relative group text-primary-foreground"
           >
             Kazi Shawpnil
-            <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-              isScrolled ? "bg-primary" : "bg-accent"
-            }`}></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
           </a>
 
           {/* Desktop Navigation */}
@@ -73,16 +67,10 @@ export const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg group ${
-                  isScrolled
-                    ? "text-muted-foreground hover:text-foreground"
-                    : "text-primary-foreground/80 hover:text-primary-foreground"
-                }`}
+                className="relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg group text-primary-foreground/90 hover:text-primary-foreground hover:bg-primary-foreground/10"
               >
                 {link.name}
-                <span className={`absolute bottom-1 left-4 right-4 h-0.5 scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100 ${
-                  isScrolled ? "bg-primary" : "bg-accent"
-                }`}></span>
+                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-accent scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
               </a>
             ))}
           </div>
@@ -91,11 +79,7 @@ export const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className={`lg:hidden transition-colors ${
-              isScrolled 
-                ? "text-foreground hover:bg-muted" 
-                : "text-primary-foreground hover:bg-white/10"
-            }`}
+            className="lg:hidden text-primary-foreground hover:bg-primary-foreground/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -110,7 +94,7 @@ export const Navbar = () => {
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}>
-          <div className="py-4 border-t border-border/50 bg-background/95 backdrop-blur-md">
+          <div className="py-4 border-t border-primary-foreground/10 bg-primary/95 backdrop-blur-md">
             <div className="flex flex-col gap-1">
               {navLinks.map((link, index) => (
                 <a
@@ -120,7 +104,7 @@ export const Navbar = () => {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 hover:translate-x-1"
+                  className="px-4 py-3 text-sm font-medium text-primary-foreground hover:text-primary-foreground hover:bg-primary-foreground/10 rounded-lg transition-all duration-200 hover:translate-x-1"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   {link.name}

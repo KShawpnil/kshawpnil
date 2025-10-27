@@ -6,42 +6,50 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-16 pb-16">
       <div className="container mx-auto px-6 py-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col items-center text-center">
-            
-            {/* Name and Title Above Image */}
-            <div className="mb-8 animate-fade-in-up">
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-3">
-                Kazi Shawpnil
-              </h1>
-              <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
-              <p className="text-xl md:text-2xl text-muted-foreground">
-                Computer Science Researcher & Educator
-              </p>
-            </div>
+        <div className="relative max-w-7xl mx-auto">
+          
+          {/* Top Text Elements */}
+          <div className="absolute top-0 left-0 right-0 flex justify-between items-start text-sm text-muted-foreground z-20 animate-fade-in">
+            <div>By Kazi Shawpnil</div>
+            <div>Portfolio Presentation</div>
+            <div className="hidden md:block">Computer Science</div>
+          </div>
 
-            {/* Image in Center */}
-            <div className="relative mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="w-64 md:w-72 lg:w-80">
-                <img 
-                  src={profilePhoto} 
-                  alt="Kazi Shawpnil"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
+          {/* Large Background Text */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full pointer-events-none select-none">
+            <h2 className="text-[8rem] md:text-[12rem] lg:text-[15rem] font-black text-accent/20 text-center leading-none tracking-wider">
+              RESEARCHER
+            </h2>
+          </div>
+
+          {/* Decorative Hand-Drawn Elements */}
+          <div className="absolute top-20 right-10 md:right-32 w-32 h-32 pointer-events-none animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <svg viewBox="0 0 100 100" className="w-full h-full stroke-foreground/40" fill="none" strokeWidth="2">
+              <path d="M10,50 Q30,20 50,50 T90,50" />
+              <path d="M85,45 L90,50 L85,55" />
+            </svg>
+          </div>
+          
+          <div className="absolute bottom-32 left-10 md:left-32 w-40 h-20 pointer-events-none animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <svg viewBox="0 0 120 60" className="w-full h-full stroke-foreground/40" fill="none" strokeWidth="2">
+              <path d="M10,30 Q40,10 70,30 Q100,50 110,30" />
+            </svg>
+          </div>
+
+          {/* Main Content Grid */}
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[600px]">
             
-            {/* Social Links Below Image in Grid */}
-            <div className="flex flex-wrap items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            {/* Left Social Links */}
+            <div className="hidden lg:flex lg:col-span-2 flex-col gap-6 animate-fade-in" style={{ animationDelay: "0.5s" }}>
               <a 
                 href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-2 p-4 hover:scale-110 transition-all duration-300"
-                aria-label="LinkedIn Profile"
+                className="group flex flex-col items-center gap-2 hover:scale-110 transition-all duration-300"
+                aria-label="LinkedIn"
               >
-                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300">
-                  <Linkedin className="w-7 h-7 text-foreground group-hover:text-accent transition-colors" />
+                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all">
+                  <Linkedin className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs text-muted-foreground group-hover:text-accent transition-colors">LinkedIn</span>
               </a>
@@ -50,24 +58,38 @@ export const Hero = () => {
                 href="https://github.com/KShawpnil" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-2 p-4 hover:scale-110 transition-all duration-300"
-                aria-label="GitHub Profile"
+                className="group flex flex-col items-center gap-2 hover:scale-110 transition-all duration-300"
+                aria-label="GitHub"
               >
-                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300">
-                  <Github className="w-7 h-7 text-foreground group-hover:text-accent transition-colors" />
+                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all">
+                  <Github className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs text-muted-foreground group-hover:text-accent transition-colors">GitHub</span>
               </a>
-              
+            </div>
+
+            {/* Center Image */}
+            <div className="lg:col-span-8 flex justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="w-64 md:w-80 lg:w-96">
+                <img 
+                  src={profilePhoto} 
+                  alt="Kazi Shawpnil"
+                  className="w-full h-auto drop-shadow-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Right Social Links */}
+            <div className="hidden lg:flex lg:col-span-2 flex-col gap-6 animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <a 
                 href="https://www.youtube.com/@EverydayELearning24" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-2 p-4 hover:scale-110 transition-all duration-300"
-                aria-label="YouTube Channel"
+                className="group flex flex-col items-center gap-2 hover:scale-110 transition-all duration-300"
+                aria-label="YouTube"
               >
-                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300">
-                  <Youtube className="w-7 h-7 text-foreground group-hover:text-accent transition-colors" />
+                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all">
+                  <Youtube className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs text-muted-foreground group-hover:text-accent transition-colors">YouTube</span>
               </a>
@@ -76,11 +98,11 @@ export const Hero = () => {
                 href="https://orcid.org/0000-0002-5063-7996" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-2 p-4 hover:scale-110 transition-all duration-300"
-                aria-label="ORCiD Profile"
+                className="group flex flex-col items-center gap-2 hover:scale-110 transition-all duration-300"
+                aria-label="ORCiD"
               >
-                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300">
-                  <GraduationCap className="w-7 h-7 text-foreground group-hover:text-accent transition-colors" />
+                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all">
+                  <GraduationCap className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs text-muted-foreground group-hover:text-accent transition-colors">ORCiD</span>
               </a>
@@ -89,17 +111,41 @@ export const Hero = () => {
                 href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-2 p-4 hover:scale-110 transition-all duration-300"
-                aria-label="ResearchGate Profile"
+                className="group flex flex-col items-center gap-2 hover:scale-110 transition-all duration-300"
+                aria-label="ResearchGate"
               >
-                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300">
-                  <BookOpen className="w-7 h-7 text-foreground group-hover:text-accent transition-colors" />
+                <div className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all">
+                  <BookOpen className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </div>
                 <span className="text-xs text-muted-foreground group-hover:text-accent transition-colors">ResearchGate</span>
               </a>
             </div>
-            
           </div>
+
+          {/* Mobile Social Links */}
+          <div className="lg:hidden flex justify-center gap-6 mt-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <a href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all" aria-label="LinkedIn">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a href="https://github.com/KShawpnil" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all" aria-label="GitHub">
+              <Github className="w-6 h-6" />
+            </a>
+            <a href="https://www.youtube.com/@EverydayELearning24" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all" aria-label="YouTube">
+              <Youtube className="w-6 h-6" />
+            </a>
+            <a href="https://orcid.org/0000-0002-5063-7996" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all" aria-label="ORCiD">
+              <GraduationCap className="w-6 h-6" />
+            </a>
+            <a href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all" aria-label="ResearchGate">
+              <BookOpen className="w-6 h-6" />
+            </a>
+          </div>
+
+          {/* Bottom Text */}
+          <div className="absolute bottom-0 left-0 right-0 text-center text-muted-foreground mt-8 animate-fade-in z-20" style={{ animationDelay: "0.7s" }}>
+            <p className="text-lg md:text-xl font-serif">Computer Science Researcher & Educator</p>
+          </div>
+          
         </div>
       </div>
       

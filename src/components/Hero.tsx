@@ -36,27 +36,27 @@ export const Hero = () => {
                 </h1>
               </div>
               
-              {/* Social Links - Compact */}
-              <div className="flex flex-col gap-2 w-full max-w-xs">
-                <a href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent" aria-label="LinkedIn">
-                  <Linkedin className="w-5 h-5 text-foreground flex-shrink-0" />
-                  <span className="text-foreground font-medium text-sm">LinkedIn</span>
+              {/* Social Links - Icons with Names Below */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6">
+                <a href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="LinkedIn">
+                  <Linkedin className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground font-medium text-xs">LinkedIn</span>
                 </a>
-                <a href="https://github.com/KShawpnil" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent" aria-label="GitHub">
-                  <Github className="w-5 h-5 text-foreground flex-shrink-0" />
-                  <span className="text-foreground font-medium text-sm">GitHub</span>
+                <a href="https://github.com/KShawpnil" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="GitHub">
+                  <Github className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground font-medium text-xs">GitHub</span>
                 </a>
-                <a href="https://www.youtube.com/@EverydayELearning24" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent" aria-label="YouTube">
-                  <Youtube className="w-5 h-5 text-foreground flex-shrink-0" />
-                  <span className="text-foreground font-medium text-sm">YouTube</span>
+                <a href="https://www.youtube.com/@EverydayELearning24" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="YouTube">
+                  <Youtube className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground font-medium text-xs">YouTube</span>
                 </a>
-                <a href="https://orcid.org/0000-0002-5063-7996" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent" aria-label="ORCiD">
-                  <GraduationCap className="w-5 h-5 text-foreground flex-shrink-0" />
-                  <span className="text-foreground font-medium text-sm">ORCiD</span>
+                <a href="https://orcid.org/0000-0002-5063-7996" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="ORCiD">
+                  <GraduationCap className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground font-medium text-xs">ORCiD</span>
                 </a>
-                <a href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent" aria-label="ResearchGate">
-                  <BookOpen className="w-5 h-5 text-foreground flex-shrink-0" />
-                  <span className="text-foreground font-medium text-sm">ResearchGate</span>
+                <a href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-4 bg-muted/50 hover:bg-accent/20 rounded-lg hover:scale-105 transition-all border border-transparent hover:border-accent min-w-[100px]" aria-label="ResearchGate">
+                  <BookOpen className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground font-medium text-xs">ResearchGate</span>
                 </a>
               </div>
             </div>

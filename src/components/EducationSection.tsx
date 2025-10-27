@@ -51,7 +51,7 @@ export const EducationSection = () => {
                         <span className="text-sm text-muted-foreground">2017 - 2019</span>
                       </div>
                       <p className="text-primary font-medium mb-2">Birshreshtha Munshi Abdur Rouf Public College</p>
-                      <p className="text-muted-foreground">Dhaka, Bangladesh • Science Group</p>
+                      <p className="text-muted-foreground">Dhaka, Bangladesh</p>
                     </div>
                   </div>
                 </Card>
@@ -70,7 +70,7 @@ export const EducationSection = () => {
                         <span className="text-sm text-muted-foreground">2016 - 2017</span>
                       </div>
                       <p className="text-primary font-medium mb-2">Dhanmondi Government Girls High School</p>
-                      <p className="text-muted-foreground">Dhaka, Bangladesh • Science Group</p>
+                      <p className="text-muted-foreground">Dhaka, Bangladesh</p>
                     </div>
                   </div>
                 </Card>

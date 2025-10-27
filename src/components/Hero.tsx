@@ -17,7 +17,7 @@ export const Hero = () => {
 
           {/* Large Background Text */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full pointer-events-none select-none">
-            <h2 className="text-[8rem] md:text-[12rem] lg:text-[15rem] font-black text-accent/20 text-center leading-none tracking-wider">
+            <h2 className="text-[6rem] md:text-[9rem] lg:text-[11rem] font-black text-accent/20 text-center leading-none tracking-wider">
               PORTFOLIO
             </h2>
           </div>

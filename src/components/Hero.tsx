@@ -8,16 +8,9 @@ export const Hero = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="relative max-w-7xl mx-auto">
           
-          {/* Top Text Elements */}
-          <div className="absolute top-0 left-0 right-0 flex justify-between items-start text-sm text-muted-foreground z-20 animate-fade-in">
-            <div>By Kazi Shawpnil</div>
-            <div>Portfolio Presentation</div>
-            <div className="hidden md:block">Computer Science</div>
-          </div>
-
           {/* Large Background Text */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full pointer-events-none select-none">
-            <h2 className="text-[6rem] md:text-[9rem] lg:text-[11rem] font-black text-accent/20 text-center leading-none tracking-wider">
+            <h2 className="text-[4rem] md:text-[7rem] lg:text-[9rem] font-black text-accent/20 text-center leading-none tracking-wider">
               PORTFOLIO
             </h2>
           </div>

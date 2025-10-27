@@ -37,14 +37,12 @@ export const Hero = () => {
 
             {/* Content Section */}
             <div className="text-center lg:text-left animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 relative inline-block">
-                Hey Friends
-                <span className="absolute -bottom-2 left-0 w-full h-1 bg-accent"></span>
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4">
+                Kazi Shawpnil
               </h1>
               
-              <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 mt-8">
-                I'm <span className="font-semibold">Kazi Shawpnil</span>. I'm a{" "}
-                <span className="font-semibold">Computer Science Researcher & Educator</span> passionate about advancing technology and education.
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+                Computer Science Researcher & Educator
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 text-muted-foreground">

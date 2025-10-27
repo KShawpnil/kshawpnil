@@ -7,10 +7,12 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { AwardsSection } from "@/components/AwardsSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ContactSection } from "@/components/ContactSection";
+import { Navbar } from "@/components/Navbar";
 
 const Index = () => {
   return (
     <main className="font-sans">
+      <Navbar />
       <Hero />
       <ResearchSection />
       <EducationSection />

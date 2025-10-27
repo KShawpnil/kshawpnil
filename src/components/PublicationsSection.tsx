@@ -71,7 +71,7 @@ export const PublicationsSection = () => {
           
           <div className="mt-12 text-center">
             <Button variant="outline" size="lg" asChild>
-              <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://scholar.google.com/citations?user=BEm3vG0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Google Scholar Profile
               </a>

@@ -70,7 +70,7 @@ export const ContactSection = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://scholar.google.com" 
+              href="https://scholar.google.com/citations?user=BEm3vG0AAAAJ&hl=en" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-all hover:scale-110"

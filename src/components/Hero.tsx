@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Github, Linkedin, Youtube } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Youtube, GraduationCap, BookOpen } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -44,28 +44,49 @@ export const Hero = () => {
           
           <div className="flex items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.5s" }}>
             <a 
-              href="https://github.com/kazishawpnil" 
+              href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary-foreground/80 hover:text-accent transition-all hover:scale-110"
-            >
-              <Github className="w-6 h-6" />
-            </a>
-            <a 
-              href="https://linkedin.com/in/kazishawpnil" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-foreground/80 hover:text-accent transition-all hover:scale-110"
+              aria-label="LinkedIn Profile"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="https://youtube.com/@everydayelearning" 
+              href="https://github.com/KShawpnil" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary-foreground/80 hover:text-accent transition-all hover:scale-110"
+              aria-label="GitHub Profile"
+            >
+              <Github className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://www.youtube.com/@EverydayELearning24" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary-foreground/80 hover:text-accent transition-all hover:scale-110"
+              aria-label="YouTube Channel"
             >
               <Youtube className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://orcid.org/0000-0002-5063-7996" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary-foreground/80 hover:text-accent transition-all hover:scale-110"
+              aria-label="ORCiD Profile"
+            >
+              <GraduationCap className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary-foreground/80 hover:text-accent transition-all hover:scale-110"
+              aria-label="ResearchGate Profile"
+            >
+              <BookOpen className="w-6 h-6" />
             </a>
           </div>
         </div>

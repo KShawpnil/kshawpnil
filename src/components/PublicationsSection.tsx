@@ -18,6 +18,7 @@ export const PublicationsSection = () => {
       authors: "Uddin, M., Shawpnil, K., Mugdha, S. B. S., & Ahmed, A.",
       venue: "Journal of Environmental and Public Health",
       year: "2023",
+      link: "https://onlinelibrary.wiley.com/doi/full/10.1155/2023/9738094",
     },
   ];
 

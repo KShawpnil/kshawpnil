@@ -7,20 +7,6 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-8 pb-16">
       <div className="container mx-auto px-6 py-6">
         <div className="relative max-w-7xl mx-auto">
-          
-          {/* Decorative Hand-Drawn Elements */}
-          <div className="absolute top-10 right-10 md:right-20 w-32 h-32 pointer-events-none animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <svg viewBox="0 0 100 100" className="w-full h-full stroke-foreground/40" fill="none" strokeWidth="2">
-              <path d="M10,50 Q30,20 50,50 T90,50" />
-              <path d="M85,45 L90,50 L85,55" />
-            </svg>
-          </div>
-          
-          <div className="absolute bottom-20 left-10 md:left-20 w-40 h-20 pointer-events-none animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <svg viewBox="0 0 120 60" className="w-full h-full stroke-foreground/40" fill="none" strokeWidth="2">
-              <path d="M10,30 Q40,10 70,30 Q100,50 110,30" />
-            </svg>
-          </div>
 
           {/* Main Content - Side by Side Layout */}
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 min-h-[500px]">

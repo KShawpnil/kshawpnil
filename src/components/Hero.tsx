@@ -4,61 +4,55 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-24 pb-16">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-light rounded-full blur-3xl"></div>
-      </div>
-      
-      <div className="container mx-auto px-6 py-20 relative z-10">
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-24 pb-16">
+      <div className="container mx-auto px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             
-            {/* Image Section with Unique Shape */}
-            <div className="relative animate-fade-in">
-              {/* Decorative rings */}
-              <div className="absolute -inset-4 rounded-full border-2 border-accent/30 animate-pulse"></div>
-              <div className="absolute -inset-8 rounded-full border border-primary-light/20"></div>
+            {/* Image Section with Decorative Blob */}
+            <div className="relative flex justify-center lg:justify-start animate-fade-in">
+              {/* Abstract decorative blob shape */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] md:w-[420px] md:h-[420px]">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <path 
+                    fill="hsl(var(--accent))" 
+                    opacity="0.3"
+                    d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-0.9C87,14.6,81.4,29.2,73.1,42.2C64.8,55.2,53.8,66.6,40.3,73.8C26.8,81,10.8,83.9,-4.8,82.4C-20.4,80.9,-35.6,75,-48.9,66.4C-62.2,57.8,-73.6,46.5,-80.5,32.8C-87.4,19.1,-89.8,3,-86.7,-11.5C-83.6,-26,-75,-39,-63.8,-49.6C-52.6,-60.2,-38.8,-68.4,-24.3,-75.3C-9.8,-82.2,5.4,-87.8,20.8,-87.1C36.2,-86.4,51.8,-79.4,44.7,-76.4Z" 
+                    transform="translate(100 100)" 
+                  />
+                </svg>
+              </div>
               
-              {/* Hexagonal image container */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary-light/20 rounded-full blur-xl"></div>
-                <div 
-                  className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary-foreground/20 shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                  style={{
-                    clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"
-                  }}
-                >
+              {/* Circular profile image */}
+              <div className="relative z-10 w-72 h-72 md:w-80 md:h-80">
+                <div className="w-full h-full rounded-full overflow-hidden border-8 border-background shadow-2xl">
                   <img 
                     src={profilePhoto} 
                     alt="Kazi Shawpnil"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
-                {/* Floating accent elements */}
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent/30 rounded-full blur-2xl animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary-light/40 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }}></div>
               </div>
             </div>
 
             {/* Content Section */}
-            <div className="flex-1 text-center lg:text-left max-w-2xl">
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
-                Kazi Shawpnil
+            <div className="text-center lg:text-left animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 relative inline-block">
+                Hey Friends
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-accent"></span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-primary-foreground/90 mb-6 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                Computer Science Researcher & Educator
+              <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 mt-8">
+                I'm <span className="font-semibold">Kazi Shawpnil</span>. I'm a{" "}
+                <span className="font-semibold">Computer Science Researcher & Educator</span> passionate about advancing technology and education.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 text-primary-foreground/80 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-accent" />
                   <span>Columbus, Ohio, USA</span>
                 </div>
-                <div className="hidden sm:block text-primary-foreground/40">•</div>
+                <div className="hidden sm:block">•</div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-5 h-5 text-accent" />
                   <a href="mailto:kshawpnil@gmail.com" className="hover:text-accent transition-colors">
@@ -68,51 +62,51 @@ export const Hero = () => {
               </div>
               
               {/* Social Links */}
-              <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <div className="flex items-center justify-center lg:justify-start gap-4">
                 <a 
                   href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group relative p-3 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20 hover:border-accent hover:bg-accent/20 transition-all duration-300 hover:scale-110"
+                  className="group p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300 hover:scale-110"
                   aria-label="LinkedIn Profile"
                 >
-                  <Linkedin className="w-6 h-6 text-primary-foreground group-hover:text-accent transition-colors" />
+                  <Linkedin className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </a>
                 <a 
                   href="https://github.com/KShawpnil" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group relative p-3 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20 hover:border-accent hover:bg-accent/20 transition-all duration-300 hover:scale-110"
+                  className="group p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300 hover:scale-110"
                   aria-label="GitHub Profile"
                 >
-                  <Github className="w-6 h-6 text-primary-foreground group-hover:text-accent transition-colors" />
+                  <Github className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </a>
                 <a 
                   href="https://www.youtube.com/@EverydayELearning24" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group relative p-3 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20 hover:border-accent hover:bg-accent/20 transition-all duration-300 hover:scale-110"
+                  className="group p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300 hover:scale-110"
                   aria-label="YouTube Channel"
                 >
-                  <Youtube className="w-6 h-6 text-primary-foreground group-hover:text-accent transition-colors" />
+                  <Youtube className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </a>
                 <a 
                   href="https://orcid.org/0000-0002-5063-7996" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group relative p-3 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20 hover:border-accent hover:bg-accent/20 transition-all duration-300 hover:scale-110"
+                  className="group p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300 hover:scale-110"
                   aria-label="ORCiD Profile"
                 >
-                  <GraduationCap className="w-6 h-6 text-primary-foreground group-hover:text-accent transition-colors" />
+                  <GraduationCap className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </a>
                 <a 
                   href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group relative p-3 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20 hover:border-accent hover:bg-accent/20 transition-all duration-300 hover:scale-110"
+                  className="group p-3 bg-muted/50 hover:bg-accent/20 rounded-full border-2 border-transparent hover:border-accent transition-all duration-300 hover:scale-110"
                   aria-label="ResearchGate Profile"
                 >
-                  <BookOpen className="w-6 h-6 text-primary-foreground group-hover:text-accent transition-colors" />
+                  <BookOpen className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                 </a>
               </div>
             </div>
@@ -123,8 +117,8 @@ export const Hero = () => {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-1.5 bg-primary-foreground/50 rounded-full"></div>
+        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-1.5 bg-muted-foreground/50 rounded-full"></div>
         </div>
       </div>
     </section>

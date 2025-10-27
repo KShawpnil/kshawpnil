@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Trophy, Lightbulb } from "lucide-react";
+import { Trophy, Lightbulb, Zap } from "lucide-react";
 
 export const ProjectsSection = () => {
   const featuredProjects = [
@@ -88,57 +88,76 @@ export const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+              <Zap className="w-8 h-8 text-primary" />
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Undergraduate Projects
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-            <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
               A comprehensive collection of 13 undergraduate projects showcasing expertise across IoT, AI, web development, embedded systems, and software engineering
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project, index) => (
-              <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-5 h-5 text-primary" />
+              <Card 
+                key={index} 
+                className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-elegant hover:-translate-y-1 flex flex-col"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative p-6 flex flex-col h-full">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <Lightbulb className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <Badge variant="secondary" className="mb-2">
+                        {project.category}
+                      </Badge>
+                    </div>
                   </div>
-                  <div>
-                    <Badge variant="secondary" className="mb-2">{project.category}</Badge>
-                    <h3 className="font-semibold text-lg text-foreground leading-tight">
-                      {project.title}
-                    </h3>
+                  
+                  <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                    {project.description}
+                  </p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                        <span 
+                          key={techIndex} 
+                          className="px-2.5 py-1 bg-muted text-foreground text-xs rounded-md hover:bg-muted/80 transition-colors"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.technologies.length > 3 && (
+                        <span className="px-2.5 py-1 bg-muted text-foreground text-xs rounded-md">
+                          +{project.technologies.length - 3}
+                        </span>
+                      )}
+                    </div>
+                    
+                    {project.achievement && (
+                      <div className="flex items-start gap-2 p-3 bg-accent/10 rounded-lg border border-accent/20">
+                        <Trophy className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <p className="text-xs text-foreground font-medium leading-relaxed">
+                          {project.achievement}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
-                
-                <p className="text-muted-foreground text-sm mb-4 flex-1">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                    <span key={techIndex} className="px-2 py-1 bg-muted text-foreground text-xs rounded">
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 bg-muted text-foreground text-xs rounded">
-                      +{project.technologies.length - 3} more
-                    </span>
-                  )}
-                </div>
-                
-                {project.achievement && (
-                  <div className="flex items-start gap-2 p-3 bg-accent/10 rounded-lg">
-                    <Trophy className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                    <p className="text-xs text-accent-foreground">{project.achievement}</p>
-                  </div>
-                )}
               </Card>
             ))}
           </div>

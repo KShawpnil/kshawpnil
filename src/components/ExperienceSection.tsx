@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Youtube } from "lucide-react";
+import { Briefcase, GraduationCap, Youtube, MapPin, Calendar } from "lucide-react";
 
 export const ExperienceSection = () => {
   const experiences = [
@@ -11,6 +11,7 @@ export const ExperienceSection = () => {
       period: "June 2021 - Present",
       description: "Creating educational content and tutorials for students, building a community of learners.",
       type: "teaching",
+      gradient: "from-secondary/20 to-secondary/5",
     },
     {
       icon: Briefcase,
@@ -20,6 +21,7 @@ export const ExperienceSection = () => {
       period: "Oct 2024 - Feb 2025",
       description: "Coordinating business operations and managing project workflows.",
       type: "work",
+      gradient: "from-primary/20 to-primary/5",
     },
     {
       icon: GraduationCap,
@@ -29,6 +31,7 @@ export const ExperienceSection = () => {
       period: "Nov 2022 - May 2024",
       description: "Assisted in teaching courses, mentoring students, and supporting laboratory sessions.",
       type: "teaching",
+      gradient: "from-accent/20 to-accent/5",
     },
     {
       icon: GraduationCap,
@@ -38,39 +41,73 @@ export const ExperienceSection = () => {
       period: "Jan 2023 - Jan 2024",
       description: "Evaluated student assignments and provided constructive feedback.",
       type: "teaching",
+      gradient: "from-secondary/15 to-secondary/5",
     },
   ];
 
   return (
-    <section id="experience" className="py-24 bg-gradient-section">
+    <section id="experience" className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+              <Briefcase className="w-8 h-8 text-primary" />
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Work Experiences
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Professional journey spanning education, business, and content creation
+            </p>
           </div>
           
-          <div className="space-y-6">
+          <div className="grid gap-6">
             {experiences.map((exp, index) => {
               const Icon = exp.icon;
+              const colorClass = exp.type === 'teaching' ? 'text-secondary' : 'text-primary';
+              const bgClass = exp.type === 'teaching' ? 'bg-secondary/10' : 'bg-primary/10';
+              
               return (
-                <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 ${exp.type === 'teaching' ? 'bg-secondary/10' : 'bg-primary/10'} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <Icon className={`w-6 h-6 ${exp.type === 'teaching' ? 'text-secondary' : 'text-primary'}`} />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between flex-wrap gap-2 mb-2">
-                        <h3 className="font-semibold text-xl text-foreground">{exp.title}</h3>
-                        <span className="text-sm text-muted-foreground">{exp.period}</span>
+                <Card 
+                  key={index} 
+                  className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-elegant"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  
+                  <div className="relative p-6 md:p-8">
+                    <div className="flex flex-col md:flex-row gap-6">
+                      <div className="flex-shrink-0">
+                        <div className={`w-16 h-16 rounded-xl ${bgClass} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          <Icon className={`w-8 h-8 ${colorClass}`} />
+                        </div>
                       </div>
-                      <p className={`${exp.type === 'teaching' ? 'text-secondary' : 'text-primary'} font-medium mb-1`}>
-                        {exp.organization}
-                      </p>
-                      <p className="text-muted-foreground text-sm mb-2">{exp.location}</p>
-                      <p className="text-muted-foreground">{exp.description}</p>
+                      
+                      <div className="flex-1 space-y-3">
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                          <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                            {exp.title}
+                          </h3>
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span className="text-sm font-medium whitespace-nowrap">{exp.period}</span>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <p className={`text-lg font-semibold ${colorClass}`}>
+                            {exp.organization}
+                          </p>
+                          
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <MapPin className="w-4 h-4" />
+                            <span className="text-sm">{exp.location}</span>
+                          </div>
+                          
+                          <p className="text-muted-foreground pt-2">
+                            {exp.description}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Card>

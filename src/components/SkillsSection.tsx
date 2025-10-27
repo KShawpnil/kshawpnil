@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Code, Layout, Database, Wrench } from "lucide-react";
+import { Code, Layout, Database, Wrench, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export const SkillsSection = () => {
   const skillCategories = [
@@ -8,61 +9,81 @@ export const SkillsSection = () => {
       title: "Programming Languages",
       skills: ["Python", "Java", "JavaFX", "C", "C++"],
       color: "primary",
+      gradient: "from-primary/20 to-primary/5",
     },
     {
       icon: Layout,
       title: "Web Development",
       skills: ["HTML", "CSS", "PHP", "JavaScript", "WordPress", "Laravel", "Next.js"],
       color: "secondary",
+      gradient: "from-secondary/20 to-secondary/5",
     },
     {
       icon: Database,
       title: "Databases",
       skills: ["MySQL", "NoSQL", "Prisma", "Firebase"],
       color: "accent",
+      gradient: "from-accent/20 to-accent/5",
     },
     {
       icon: Wrench,
       title: "Tools & Software",
       skills: ["Figma", "Canva", "JIRA", "Overleaf", "Git"],
       color: "primary",
+      gradient: "from-primary/15 to-primary/5",
     },
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gradient-section">
+    <section id="skills" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+              <Sparkles className="w-8 h-8 text-primary" />
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Technical Skills
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Comprehensive skill set across multiple domains of software development
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
-              const colorClass = {
-                primary: "bg-primary/10 text-primary",
-                secondary: "bg-secondary/10 text-secondary",
-                accent: "bg-accent/10 text-accent",
-              }[category.color];
+              const colorClass = `text-${category.color}`;
+              const bgClass = `bg-${category.color}/10`;
               
               return (
-                <Card key={index} className="p-6 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`w-12 h-12 ${colorClass} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <Icon className="w-6 h-6" />
+                <Card 
+                  key={index} 
+                  className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-elegant"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  
+                  <div className="relative p-6 md:p-8 space-y-5">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-14 h-14 ${bgClass} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className={`w-7 h-7 ${colorClass}`} />
+                      </div>
+                      <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                        {category.title}
+                      </h3>
                     </div>
-                    <h3 className="font-semibold text-xl text-foreground pt-2">{category.title}</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-3 py-1.5 bg-muted text-foreground text-sm rounded-lg hover:bg-muted/80 transition-colors">
-                        {skill}
-                      </span>
-                    ))}
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill, skillIndex) => (
+                        <Badge 
+                          key={skillIndex} 
+                          variant="secondary"
+                          className="px-3 py-1.5 text-sm hover:scale-105 transition-transform cursor-default"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </Card>
               );

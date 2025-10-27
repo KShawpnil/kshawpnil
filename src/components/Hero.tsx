@@ -4,8 +4,8 @@ import profilePhoto from "@/assets/profile-photo.png";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-24 pb-16">
-      <div className="container mx-auto px-6 py-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-16 pb-16">
+      <div className="container mx-auto px-6 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             

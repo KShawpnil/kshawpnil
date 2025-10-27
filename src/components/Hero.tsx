@@ -11,14 +11,17 @@ export const Hero = () => {
           {/* Main Content - Side by Side Layout */}
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 min-h-[500px]">
             
-            {/* Left - Image */}
+            {/* Left - Image with Shape */}
             <div className="flex items-center justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="w-64 md:w-72 lg:w-80">
-                <img 
-                  src={profilePhoto} 
-                  alt="Kazi Shawpnil"
-                  className="w-full h-auto drop-shadow-2xl"
-                />
+              <div className="relative w-64 md:w-72 lg:w-80">
+                <div className="absolute inset-0 bg-accent/10 rounded-full blur-2xl"></div>
+                <div className="relative rounded-full overflow-hidden border-4 border-accent/20 shadow-2xl">
+                  <img 
+                    src={profilePhoto} 
+                    alt="Kazi Shawpnil"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
 

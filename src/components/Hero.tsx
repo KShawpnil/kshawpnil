@@ -34,7 +34,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Floating Decorative Cards - Closer to image */}
-                <div className="absolute top-8 left-4 w-32 h-28 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "0.4s" }}>
+                <div className="absolute top-16 left-12 w-32 h-28 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "0.4s" }}>
                   <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 mb-2">
                     <Code2 className="w-5 h-5 text-primary" />
                   </div>
@@ -45,7 +45,7 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                <div className="absolute top-4 right-8 w-28 h-28 bg-accent/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-accent/30 shadow-lg hover:scale-105 transition-transform flex flex-col items-center justify-center" style={{ animationDelay: "0.6s" }}>
+                <div className="absolute top-12 right-16 w-28 h-28 bg-accent/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-accent/30 shadow-lg hover:scale-105 transition-transform flex flex-col items-center justify-center" style={{ animationDelay: "0.6s" }}>
                   <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-2">
                     <Cpu className="w-7 h-7 text-accent" />
                   </div>
@@ -55,7 +55,7 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-12 left-8 w-28 h-24 bg-secondary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-secondary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "0.8s" }}>
+                <div className="absolute bottom-20 left-16 w-28 h-24 bg-secondary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-secondary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "0.8s" }}>
                   <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-secondary/10 mb-2">
                     <Database className="w-5 h-5 text-secondary" />
                   </div>
@@ -65,7 +65,7 @@ export const Hero = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-8 right-12 w-28 h-24 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "1s" }}>
+                <div className="absolute bottom-16 right-20 w-28 h-24 bg-primary/5 backdrop-blur-sm rounded-2xl p-3 animate-fade-in border border-primary/30 shadow-lg hover:scale-105 transition-transform" style={{ animationDelay: "1s" }}>
                   <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 mb-2">
                     <Globe className="w-5 h-5 text-primary" />
                   </div>
@@ -77,10 +77,10 @@ export const Hero = () => {
                 </div>
 
                 {/* Small decorative dots */}
-                <div className="absolute top-1/4 left-20 w-2.5 h-2.5 bg-accent rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.5s" }}></div>
-                <div className="absolute top-1/3 right-24 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.7s" }}></div>
-                <div className="absolute bottom-1/3 left-24 w-2 h-2 bg-secondary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.9s" }}></div>
-                <div className="absolute bottom-1/4 right-20 w-1.5 h-1.5 bg-accent/70 rounded-full animate-pulse shadow-lg" style={{ animationDelay: "1.1s" }}></div>
+                <div className="absolute top-1/4 left-28 w-2.5 h-2.5 bg-accent rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.5s" }}></div>
+                <div className="absolute top-1/3 right-32 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.7s" }}></div>
+                <div className="absolute bottom-1/3 left-32 w-2 h-2 bg-secondary rounded-full animate-pulse shadow-lg" style={{ animationDelay: "0.9s" }}></div>
+                <div className="absolute bottom-1/4 right-28 w-1.5 h-1.5 bg-accent/70 rounded-full animate-pulse shadow-lg" style={{ animationDelay: "1.1s" }}></div>
               </div>
             </div>
 

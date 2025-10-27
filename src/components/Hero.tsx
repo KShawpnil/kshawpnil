@@ -33,16 +33,7 @@ export const Hero = () => {
             </div>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" variant="accent" asChild>
-              <a href="#research">View Research</a>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <a href="#publications">Publications</a>
-            </Button>
-          </div>
-          
-          <div className="flex items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <div className="flex items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <a 
               href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" 
               target="_blank" 

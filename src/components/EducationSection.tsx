@@ -31,7 +31,8 @@ export const EducationSection = () => {
                         <span className="text-sm text-muted-foreground">2020 - 2024</span>
                       </div>
                       <p className="text-primary font-medium mb-2">United International University</p>
-                      <p className="text-muted-foreground">Dhaka, Bangladesh</p>
+                      <p className="text-muted-foreground mb-2">Dhaka, Bangladesh</p>
+                      <p className="text-foreground"><span className="font-medium">Major:</span> Software Engineering</p>
                     </div>
                   </div>
                 </Card>

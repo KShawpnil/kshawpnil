@@ -43,6 +43,48 @@ export const ProjectsSection = () => {
       technologies: ["Software Architecture", "System Design"],
       category: "Software Engineering",
     },
+    {
+      title: "CVGen",
+      description: "Web application system that allows users to choose a CV template and generate their preferred CV.",
+      technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
+      category: "Web Development",
+    },
+    {
+      title: "ApacheJMeter for OrangeHRM",
+      description: "Performance testing, functional testing, and load testing of web applications using Apache JMeter to simulate heavy loads with concurrent users.",
+      technologies: ["Apache JMeter", "PHP"],
+      category: "Software Testing",
+    },
+    {
+      title: "Student Management System",
+      description: "System to track student information including departments, courses, and scholarships with login functionality and chatting options.",
+      technologies: ["PHP", "HTML", "CSS", "MySQL"],
+      category: "Database Systems",
+    },
+    {
+      title: "Online Examination Management System",
+      description: "Web-based application platform allowing instructors to review and assign grades while students submit quizzes.",
+      technologies: ["Java", "JavaFX"],
+      category: "Education Technology",
+    },
+    {
+      title: "Online Shopping Application",
+      description: "Shopping application with various categories for men's and women's clothing, discounts, invoice history, and manager portal for product control.",
+      technologies: ["C"],
+      category: "E-Commerce",
+    },
+    {
+      title: "Session Security and File Upload Security",
+      description: "Applied session security inactivity and file upload security measures in the UIU Student Activity Tracker project.",
+      technologies: ["PHP", "Security Protocols"],
+      category: "Computer Security",
+    },
+    {
+      title: "Student Bicycle Tracking System",
+      description: "System allowing students to borrow bicycles for a set period with location tracking capabilities for authorities if not returned on time.",
+      technologies: ["Arduino", "ESP32", "PHP"],
+      category: "IoT & Tracking",
+    },
   ];
 
   return (
@@ -55,7 +97,7 @@ export const ProjectsSection = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
             <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-              A selection of undergraduate projects showcasing innovation in IoT, AI, web development, and accessible technology
+              A comprehensive collection of 13 undergraduate projects showcasing expertise across IoT, AI, web development, embedded systems, and software engineering
             </p>
           </div>
           

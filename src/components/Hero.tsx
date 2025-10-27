@@ -22,51 +22,44 @@ export const Hero = () => {
             </svg>
           </div>
 
-          {/* Main Content - Tight Spacing */}
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[500px]">
+          {/* Main Content - Side by Side Layout */}
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 min-h-[500px]">
             
-            {/* Left - PORT */}
-            <div className="flex items-center justify-end animate-fade-in -mr-4 lg:-mr-8">
-              <h2 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-accent/20 leading-none tracking-tight">
-                PORT
-              </h2>
-            </div>
-
-            {/* Center - Image */}
-            <div className="flex flex-col items-center justify-center animate-fade-in z-10" style={{ animationDelay: "0.2s" }}>
-              <div className="w-48 md:w-56 lg:w-64 mb-8">
+            {/* Left - Image */}
+            <div className="flex items-center justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="w-64 md:w-72 lg:w-80">
                 <img 
                   src={profilePhoto} 
                   alt="Kazi Shawpnil"
                   className="w-full h-auto drop-shadow-2xl"
                 />
               </div>
-              
-              {/* Social Links Below Image */}
-              <div className="flex justify-center gap-4">
-                <a href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="LinkedIn">
-                  <Linkedin className="w-5 h-5 text-foreground hover:text-accent transition-colors" />
-                </a>
-                <a href="https://github.com/KShawpnil" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="GitHub">
-                  <Github className="w-5 h-5 text-foreground hover:text-accent transition-colors" />
-                </a>
-                <a href="https://www.youtube.com/@EverydayELearning24" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="YouTube">
-                  <Youtube className="w-5 h-5 text-foreground hover:text-accent transition-colors" />
-                </a>
-                <a href="https://orcid.org/0000-0002-5063-7996" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="ORCiD">
-                  <GraduationCap className="w-5 h-5 text-foreground hover:text-accent transition-colors" />
-                </a>
-                <a href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="ResearchGate">
-                  <BookOpen className="w-5 h-5 text-foreground hover:text-accent transition-colors" />
-                </a>
-              </div>
             </div>
 
-            {/* Right - FOLIO */}
-            <div className="flex items-center justify-start animate-fade-in -ml-4 lg:-ml-8" style={{ animationDelay: "0.1s" }}>
-              <h2 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-black text-accent/20 leading-none tracking-tight">
-                FOLIO
-              </h2>
+            {/* Right - Title and Links */}
+            <div className="flex flex-col items-center lg:items-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-8 tracking-tight">
+                My Portfolio
+              </h1>
+              
+              {/* Social Links */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <a href="https://www.linkedin.com/in/kazi-shawpnil-8430561b9/" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="LinkedIn">
+                  <Linkedin className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+                </a>
+                <a href="https://github.com/KShawpnil" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="GitHub">
+                  <Github className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+                </a>
+                <a href="https://www.youtube.com/@EverydayELearning24" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="YouTube">
+                  <Youtube className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+                </a>
+                <a href="https://orcid.org/0000-0002-5063-7996" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="ORCiD">
+                  <GraduationCap className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+                </a>
+                <a href="https://www.researchgate.net/profile/Kazi-Shawpnil?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/50 hover:bg-accent/20 rounded-full hover:scale-110 transition-all border-2 border-transparent hover:border-accent" aria-label="ResearchGate">
+                  <BookOpen className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+                </a>
+              </div>
             </div>
             
           </div>

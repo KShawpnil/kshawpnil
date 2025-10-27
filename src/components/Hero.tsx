@@ -157,7 +157,7 @@ export const Hero = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/30 hover:scale-105"
                   aria-label="ResearchGate Profile"
                 >
-                  <img src={researchGateLogo} alt="ResearchGate" className="w-4 h-4" />
+                  <img src={researchGateLogo} alt="ResearchGate" className="w-5 h-5" />
                   <span className="text-sm font-medium text-foreground">ResearchGate</span>
                 </a>
                 <a 

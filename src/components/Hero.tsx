@@ -9,10 +9,10 @@ export const Hero = () => {
         <div className="relative w-full">
 
           {/* Main Content - Image Left, Content Right */}
-          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 min-h-[400px]">
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 min-h-[400px]">
             
             {/* Left - Image with Shape */}
-            <div className="flex items-center justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="flex items-center justify-center lg:justify-start animate-fade-in lg:self-center" style={{ animationDelay: "0.2s" }}>
               <div className="relative w-48 md:w-56 lg:w-64">
                 <div className="absolute inset-0 bg-accent/10 rounded-full blur-2xl"></div>
                 <div className="relative rounded-full overflow-hidden border-4 border-accent/20 shadow-2xl">

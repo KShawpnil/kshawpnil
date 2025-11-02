@@ -54,14 +54,17 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-muted/30 border-t border-border">
+    <footer className="bg-primary/5 border-t border-primary/20">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Column */}
           <div>
-            <h3 className="font-serif text-xl font-bold text-foreground mb-4">
+            <h3 className="font-serif text-xl font-bold text-foreground mb-2">
               Kazi Shawpnil
             </h3>
+            <p className="text-primary/80 font-medium text-sm mb-4 italic">
+              Creating. Learning. Growing.
+            </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Researcher in HCI and Engineering Education, passionate about AI in Healthcare 
               and innovative educational technologies.

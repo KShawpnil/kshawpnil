@@ -9,6 +9,7 @@ import { SkillsSection } from "@/components/SkillsSection";
 import { AwardsSection } from "@/components/AwardsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -24,14 +25,7 @@ const Index = () => {
       <SkillsSection />
       <AwardsSection />
       <ContactSection />
-      
-      <footer className="bg-muted/30 py-8 border-t border-border">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Kazi Shawpnil. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 };

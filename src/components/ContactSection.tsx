@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -49,13 +49,6 @@ export const ContactSection = () => {
       value: "kshawpnil@gmail.com",
       link: "mailto:kshawpnil@gmail.com",
       gradient: "from-primary/20 to-primary/5",
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+1 (614) 378-7010",
-      link: "tel:+16143787010",
-      gradient: "from-secondary/20 to-secondary/5",
     },
     {
       icon: MapPin,

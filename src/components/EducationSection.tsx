@@ -35,9 +35,7 @@ export const EducationSection = () => {
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Academic Background
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              My educational journey in computer science and engineering
-            </p>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
           
           <div className="grid gap-6 md:gap-8">

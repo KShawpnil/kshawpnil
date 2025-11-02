@@ -65,10 +65,6 @@ export const Footer = () => {
             <p className="text-primary/80 font-medium text-sm mb-4 italic">
               Creating. Learning. Growing.
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Researcher in HCI and Engineering Education, passionate about AI in Healthcare 
-              and innovative educational technologies.
-            </p>
           </div>
 
           {/* Quick Links Column */}

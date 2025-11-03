@@ -36,7 +36,7 @@ export const ResearchSection = () => {
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               Research Focus
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-4xl mx-auto whitespace-nowrap">
               Exploring innovative solutions at the intersection of technology and human needs
             </p>
           </div>

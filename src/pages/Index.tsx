@@ -10,6 +10,7 @@ import { AwardsSection } from "@/components/AwardsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
       <AwardsSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

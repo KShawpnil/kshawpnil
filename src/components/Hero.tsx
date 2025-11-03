@@ -187,6 +187,16 @@ export const Hero = () => {
                   <Youtube className="w-4 h-4" style={{ color: '#FF0000' }} />
                   <span className="text-sm font-medium text-foreground">YouTube</span>
                 </a>
+                <a 
+                  href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/30 hover:scale-105"
+                  aria-label="Google Scholar Profile"
+                >
+                  <GraduationCap className="w-4 h-4" style={{ color: '#4285F4' }} />
+                  <span className="text-sm font-medium text-foreground">Google Scholar</span>
+                </a>
               </div>
 
               {/* CTA Button */}

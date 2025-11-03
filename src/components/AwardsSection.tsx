@@ -23,10 +23,19 @@ export const AwardsSection = () => {
       gradient: "from-accent/20 to-accent/5",
     },
     {
+      icon: Award,
+      title: "Conference Presentation Certificate",
+      organization: "Springer – 6th International Conference on Intelligent Sustainable Systems (ICISS 2023)",
+      period: "2023",
+      type: "certificate",
+      link: "https://drive.google.com/file/d/1LhHdh1SpAhoBTYK16YFlfFf0H92BATuH/view?usp=sharing",
+      gradient: "from-primary/15 to-primary/5",
+    },
+    {
       icon: Medal,
       title: "1st Runner-up - Electronics Laboratory",
       organization: "CSE Project Show, Spring 2022, UIU",
-      period: "2022",
+      period: "Spring 2022",
       type: "competition",
       link: "https://drive.google.com/file/d/15XwPVG73Zxq3LM0Vkc6gtF-k1UfggFPQ/view?usp=sharing",
       gradient: "from-secondary/20 to-secondary/5",
@@ -35,10 +44,19 @@ export const AwardsSection = () => {
       icon: Medal,
       title: "1st Runner-up - System Analysis and Design Laboratory",
       organization: "CSE Project Show, Summer 2022, UIU",
-      period: "2022",
+      period: "Summer 2022",
       type: "competition",
       link: "https://drive.google.com/file/d/1LhHdh1SpAhoBTYK16YFlfFf0H92BATuH/view?usp=sharing",
       gradient: "from-accent/15 to-accent/5",
+    },
+    {
+      icon: Star,
+      title: "Proficiency in C Programming",
+      organization: "Beecrowd Platform - Introduction to Computer Systems (CSE 1110)",
+      period: "2020",
+      type: "certificate",
+      link: "https://drive.google.com/file/d/1CFu70UGPLz3g745j7U_xXzjo5k_IGViV/view?usp=sharing",
+      gradient: "from-secondary/15 to-secondary/5",
     },
   ];
 
@@ -75,7 +93,7 @@ export const AwardsSection = () => {
                       <div className="flex-1 space-y-3">
                         <div>
                           <Badge className="mb-2 bg-accent/10 text-accent border-accent/20">
-                            {award.type === 'scholarship' ? 'Scholarship' : 'Competition'}
+                            {award.type === 'scholarship' ? 'Scholarship' : award.type === 'certificate' ? 'Certificate' : 'Competition'}
                           </Badge>
                           <h3 className="font-serif text-lg md:text-xl font-bold text-foreground leading-tight group-hover:text-accent transition-colors">
                             {award.title}

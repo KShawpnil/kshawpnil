@@ -15,7 +15,7 @@ export const AboutSection = () => {
           <Card className="p-8 shadow-elegant">
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I am a recent Computer Science graduate with a strong foundation in Software Engineering 
+                I am a Computer Science graduate with a strong foundation in Software Engineering 
                 from United International University, Dhaka. Currently based in Columbus, Ohio, I am passionate 
                 about leveraging technology to create meaningful impact in people's lives.
               </p>

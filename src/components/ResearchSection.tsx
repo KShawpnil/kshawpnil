@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { GraduationCap, Brain, Heart, BookOpen, Sparkles } from "lucide-react";
+import { GraduationCap, Brain, Heart, BookOpen, Sparkles, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export const ResearchSection = () => {
   const researchAreas = [
@@ -85,23 +86,40 @@ export const ResearchSection = () => {
                     <Badge className="mb-3 bg-secondary/10 text-secondary border-secondary/20">
                       Bachelor's Thesis
                     </Badge>
-                    <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-2 group-hover:text-secondary transition-colors">
-                      CEHRSR: Conveying Electronic Health Records and Synopsis Repository
-                    </h3>
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-2 group-hover:text-secondary transition-colors">
+                        CEHRSR: Conveying Electronic Health Records and Synopsis Repository - Using Cutting-edge Technology.
+                      </h3>
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="flex-shrink-0 hover:bg-secondary/10 h-9 w-9" 
+                        asChild
+                      >
+                        <a href="https://github.com/KShawpnil/CEHRSR.git" target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                   
                   <p className="text-muted-foreground leading-relaxed">
                     Developed a permissioned blockchain-based web application that allows patients and doctors to securely 
                     enter and store medical data. The system integrates Natural Language Processing (NLP) to efficiently 
                     summarize patient records and applies Human-Computer Interaction (HCI) principles to create an intuitive, 
-                    user-friendly, and accessible interface.
+                    user-friendly, and accessible interface. The project also investigates the usability challenges faced by 
+                    elderly users unfamiliar with digital systems, evaluating the effectiveness of healthcare technologies 
+                    across diverse user groups.
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="secondary">Blockchain</Badge>
-                    <Badge variant="secondary">NLP</Badge>
+                    <Badge variant="secondary">Multichain</Badge>
+                    <Badge variant="secondary">NLP (spaCy)</Badge>
                     <Badge variant="secondary">NextJS</Badge>
-                    <Badge variant="secondary">HCI</Badge>
+                    <Badge variant="secondary">Tailwind</Badge>
+                    <Badge variant="secondary">JSON</Badge>
+                    <Badge variant="secondary">Prisma</Badge>
+                    <Badge variant="secondary">Firebase</Badge>
                   </div>
                   
                   <div className="pt-2 border-t border-border/50">

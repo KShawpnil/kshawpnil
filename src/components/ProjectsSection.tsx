@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Trophy, Lightbulb, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 export const ProjectsSection = () => {
   const featuredProjects = [
@@ -10,6 +11,7 @@ export const ProjectsSection = () => {
       technologies: ["Arduino", "ESP32", "PHP", "JavaScript"],
       achievement: "Finalist in Techkriti 2023 International Competition, IIT Kanpur, India",
       category: "IoT & Accessibility",
+      link: "https://github.com/KShawpnil/techkriti.git",
     },
     {
       title: "Smart Parking System",
@@ -17,6 +19,7 @@ export const ProjectsSection = () => {
       technologies: ["Arduino", "C++"],
       achievement: "1st Runner-up in Electronics Laboratory, CSE Project Show, Spring 2022",
       category: "Embedded Systems",
+      link: "https://github.com/KShawpnil/Smart-Parking-System.git",
     },
     {
       title: "UIU Student Activity Tracker",
@@ -24,42 +27,49 @@ export const ProjectsSection = () => {
       technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
       achievement: "1st Runner-up in System Analysis and Design Laboratory, CSE Project Show, Summer 2022",
       category: "Web Development",
+      link: "https://github.com/KShawpnil/UIU_Student_Activity_Tracker.git",
     },
     {
       title: "Easy E-waste Management System",
       description: "Innovative solution for efficient and sustainable e-waste management addressing environmental and logistical challenges.",
       technologies: ["Laravel", "HTML", "CSS", "JavaScript", "MySQL"],
       category: "Sustainability",
+      link: "https://github.com/KShawpnil/EasyEWaste.git",
     },
     {
       title: "Fire Fighting Robot with Computer Vision",
       description: "Four-wheeled IoT robot using computer vision to detect and extinguish fires with a water pump system.",
       technologies: ["Arduino", "ESP32-CAM", "YOLOv8", "C", "C++"],
       category: "Robotics & AI",
+      link: "https://github.com/KShawpnil/Firefighter-Robot.git",
     },
     {
       title: "Autonomous Fleet Control System",
       description: "Centralized system for monitoring and controlling vehicle fleets with dynamic routing, optimization, and remote operation capabilities.",
       technologies: ["Software Architecture", "System Design"],
       category: "Software Engineering",
+      link: "https://drive.google.com/file/d/1w5FxkyqJF3Sa-3-6_oT_kERY9LTvAaHg/view?usp=sharing",
     },
     {
       title: "CVGen",
       description: "Web application system that allows users to choose a CV template and generate their preferred CV.",
       technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
       category: "Web Development",
+      link: "https://github.com/KShawpnil/CVGen.git",
     },
     {
       title: "ApacheJMeter for OrangeHRM",
       description: "Performance testing, functional testing, and load testing of web applications using Apache JMeter to simulate heavy loads with concurrent users.",
       technologies: ["Apache JMeter", "PHP"],
       category: "Software Testing",
+      link: "https://github.com/KShawpnil/Apache_JMeter_Orangehrm.git",
     },
     {
       title: "Student Management System",
       description: "System to track student information including departments, courses, and scholarships with login functionality and chatting options.",
       technologies: ["PHP", "HTML", "CSS", "MySQL"],
       category: "Database Systems",
+      link: "https://drive.google.com/file/d/1ccby3LnwQ04GE00bFWLcE8UOn0_iJcuB/view?usp=sharing",
     },
     {
       title: "Online Examination Management System",
@@ -72,12 +82,14 @@ export const ProjectsSection = () => {
       description: "Shopping application with various categories for men's and women's clothing, discounts, invoice history, and manager portal for product control.",
       technologies: ["C"],
       category: "E-Commerce",
+      link: "https://github.com/KShawpnil/Online-Shopping.git",
     },
     {
       title: "Session Security and File Upload Security",
       description: "Applied session security inactivity and file upload security measures in the UIU Student Activity Tracker project.",
       technologies: ["PHP", "Security Protocols"],
       category: "Computer Security",
+      link: "https://github.com/KShawpnil/Computer_Security_Project.git",
     },
     {
       title: "Student Bicycle Tracking System",
@@ -109,10 +121,22 @@ export const ProjectsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div className="relative p-6 flex flex-col h-full">
-                  <div className="flex items-start gap-3 mb-4">
+                  <div className="flex items-start justify-between gap-3 mb-4">
                     <Badge variant="secondary" className="mb-2">
                       {project.category}
                     </Badge>
+                    {project.link && (
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="flex-shrink-0 hover:bg-primary/10 h-8 w-8" 
+                        asChild
+                      >
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                   
                   <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Youtube, Mail } from "lucide-react";
+import { Github, Linkedin, Youtube, Mail, GraduationCap } from "lucide-react";
 import researchGateLogo from "@/assets/researchgate-logo.png";
 
 export const Footer = () => {
@@ -50,6 +50,12 @@ export const Footer = () => {
       href: "https://www.youtube.com/@kshawpnil",
       icon: Youtube,
       color: "hover:text-[#FF0000]",
+    },
+    {
+      name: "Google Scholar",
+      href: "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID",
+      icon: GraduationCap,
+      color: "hover:text-[#4285F4]",
     },
   ];
 

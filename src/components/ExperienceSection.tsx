@@ -1,7 +1,23 @@
 import { Card } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Youtube, MapPin, Calendar } from "lucide-react";
+import { Briefcase, GraduationCap, Youtube, MapPin, Calendar, ChevronDown } from "lucide-react";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { useState } from "react";
 
 export const ExperienceSection = () => {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   const experiences = [
     {
       icon: Youtube,
@@ -63,51 +79,66 @@ export const ExperienceSection = () => {
               const Icon = exp.icon;
               const colorClass = exp.type === 'teaching' ? 'text-secondary' : 'text-primary';
               const bgClass = exp.type === 'teaching' ? 'bg-secondary/10' : 'bg-primary/10';
+              const isOpen = openItems.includes(index);
               
               return (
-                <Card 
-                  key={index} 
-                  className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-elegant"
+                <Collapsible 
+                  key={index}
+                  open={isOpen}
+                  onOpenChange={() => toggleItem(index)}
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                  
-                  <div className="relative p-6 md:p-8">
-                    <div className="flex flex-col md:flex-row gap-6">
-                      <div className="flex-shrink-0">
-                        <div className={`w-16 h-16 rounded-xl ${bgClass} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                          <Icon className={`w-8 h-8 ${colorClass}`} />
-                        </div>
-                      </div>
-                      
-                      <div className="flex-1 space-y-3">
-                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                          <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                            {exp.title}
-                          </h3>
-                          <div className="flex items-center gap-2 text-muted-foreground">
-                            <Calendar className="w-4 h-4" />
-                            <span className="text-sm font-medium whitespace-nowrap">{exp.period}</span>
+                  <Card 
+                    className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-elegant"
+                  >
+                    <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                    
+                    <div className="relative p-6 md:p-8">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="flex-shrink-0">
+                          <div className={`w-16 h-16 rounded-xl ${bgClass} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                            <Icon className={`w-8 h-8 ${colorClass}`} />
                           </div>
                         </div>
                         
-                        <div className="space-y-2">
+                        <div className="flex-1 space-y-3">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                            <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                              {exp.title}
+                            </h3>
+                            <CollapsibleTrigger asChild>
+                              <button 
+                                className="self-start sm:self-auto flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                                aria-label={isOpen ? "Hide details" : "Show details"}
+                              >
+                                <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                              </button>
+                            </CollapsibleTrigger>
+                          </div>
+                          
                           <p className={`text-lg font-semibold ${colorClass}`}>
                             {exp.organization}
                           </p>
                           
-                          <div className="flex items-center gap-2 text-muted-foreground">
-                            <MapPin className="w-4 h-4" />
-                            <span className="text-sm">{exp.location}</span>
-                          </div>
-                          
-                          <p className="text-muted-foreground pt-2">
-                            {exp.description}
-                          </p>
+                          <CollapsibleContent className="space-y-3 animate-accordion-down">
+                            <div className="flex items-center gap-2 text-muted-foreground">
+                              <Calendar className="w-4 h-4" />
+                              <span className="text-sm font-medium">{exp.period}</span>
+                            </div>
+                            
+                            <div className="flex items-center gap-2 text-muted-foreground">
+                              <MapPin className="w-4 h-4" />
+                              <span className="text-sm">{exp.location}</span>
+                            </div>
+                            
+                            <p className="text-muted-foreground pt-2">
+                              {exp.description}
+                            </p>
+                          </CollapsibleContent>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </Collapsible>
               );
             })}
           </div>

@@ -37,7 +37,7 @@ export const ResearchSection = () => {
               Research Focus
             </h2>
             <p className="text-muted-foreground text-lg max-w-4xl mx-auto whitespace-nowrap">
-              Exploring innovative solutions at the intersection of technology and human needs
+              Exploring innovative solutions that bridge technology and human interaction.
             </p>
           </div>
           

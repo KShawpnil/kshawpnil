@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Youtube, MapPin, Calendar, ChevronDown } from "lucide-react";
+import { Briefcase, GraduationCap, Youtube, MapPin, Calendar, ChevronDown, ExternalLink } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -25,9 +25,10 @@ export const ExperienceSection = () => {
       organization: "Everyday E-Learning (YouTube)",
       location: "Dhaka, Bangladesh",
       period: "June 2021 - Present",
-      description: "Creating educational content and tutorials for students, building a community of learners.",
+      description: "• Developed educational content to simplify computer science concepts for diverse learners.\n• Promoted accessible and self-paced digital learning.",
       type: "teaching",
       gradient: "from-secondary/20 to-secondary/5",
+      link: "https://www.youtube.com/@EverydayELearning24",
     },
     {
       icon: Briefcase,
@@ -35,27 +36,28 @@ export const ExperienceSection = () => {
       organization: "AKIJ iBOS",
       location: "Dhaka, Bangladesh",
       period: "Oct 2024 - Feb 2025",
-      description: "Coordinating business operations and managing project workflows.",
+      description: "• Coordinated cross-functional operations to improve workflow efficiency.\n• Engaged with stakeholders to align business and technical objectives.",
       type: "work",
       gradient: "from-primary/20 to-primary/5",
+      link: "https://drive.google.com/file/d/1pdAsGWACYbyqcM-r5-O_xwxQwtzHgR90/view?usp=sharing",
     },
     {
       icon: GraduationCap,
       title: "Undergraduate Teaching Assistant",
-      organization: "Department of CSE, United International University",
+      organization: "Department of Computer Science and Engineering, United International University",
       location: "Dhaka, Bangladesh",
       period: "Nov 2022 - May 2024",
-      description: "Assisted in teaching courses, mentoring students, and supporting laboratory sessions.",
+      description: "• Assisted faculty in delivering and managing laboratory sessions for Electronics Laboratory (Fall 2022, Spring 2023), Structured Programming Language Laboratory, and Data Structure and Algorithms I Laboratory (Fall 2023, Spring 2024).\n• Guided students in implementing programming and circuit-based projects, evaluated lab reports, and supported hands-on learning with personalized feedback.",
       type: "teaching",
       gradient: "from-accent/20 to-accent/5",
     },
     {
       icon: GraduationCap,
       title: "Grader",
-      organization: "Department of CSE, United International University",
+      organization: "Department of Computer Science and Engineering, United International University",
       location: "Dhaka, Bangladesh",
       period: "Jan 2023 - Jan 2024",
-      description: "Evaluated student assignments and provided constructive feedback.",
+      description: "• Evaluated student submissions and ensured consistent grading for Human-Computer Interaction (HCI) (Spring & Summer 2023), Data Structure and Algorithms I (Summer 2023), and Digital Logic Design (Fall 2023).\n• Assisted instructors in providing constructive feedback and maintaining fair assessment standards.",
       type: "teaching",
       gradient: "from-secondary/15 to-secondary/5",
     },
@@ -130,9 +132,21 @@ export const ExperienceSection = () => {
                               <span className="text-sm">{exp.location}</span>
                             </div>
                             
-                            <p className="text-muted-foreground pt-2">
+                            <p className="text-muted-foreground pt-2 whitespace-pre-line">
                               {exp.description}
                             </p>
+
+                            {exp.link && (
+                              <a 
+                                href={exp.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors pt-2"
+                              >
+                                <ExternalLink className="w-4 h-4" />
+                                <span className="text-sm font-medium">View More</span>
+                              </a>
+                            )}
                           </CollapsibleContent>
                         </div>
                       </div>

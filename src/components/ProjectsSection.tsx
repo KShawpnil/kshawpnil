@@ -4,7 +4,15 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Youtube } from "lucide-react";
 
 export const ProjectsSection = () => {
-  const featuredProjects = [
+  const featuredProjects: {
+    title: string;
+    description: string;
+    technologies: string[];
+    achievement?: string;
+    category: string;
+    link?: string;
+    links?: { url: string; label: string }[];
+  }[] = [
     {
       title: "Automating Systems for Smart Households",
       description: "An IoT integrated automated system enabling physically challenged individuals to navigate their homes with monitoring capabilities for family members.",
@@ -82,7 +90,10 @@ export const ProjectsSection = () => {
       description: "Shopping application with various categories for men's and women's clothing, discounts, invoice history, and manager portal for product control.",
       technologies: ["C"],
       category: "E-Commerce",
-      link: "https://youtu.be/EmghYWvr9aw?si=Z-ad2SxE0skXfalw",
+      links: [
+        { url: "https://github.com/KShawpnil/Online-Shopping.git", label: "GitHub" },
+        { url: "https://youtu.be/EmghYWvr9aw?si=Z-ad2SxE0skXfalw", label: "YouTube" },
+      ],
     },
     {
       title: "Session Security and File Upload Security",
@@ -125,23 +136,26 @@ export const ProjectsSection = () => {
                     <Badge variant="secondary" className="mb-2">
                       {project.category}
                     </Badge>
-                    {project.link && (
-                      <Button 
-                        variant="ghost" 
-                        size="icon" 
-                        className="flex-shrink-0 hover:bg-primary/10 h-8 w-8" 
-                        asChild
-                      >
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          {project.link.includes("github.com") 
-                            ? <Github className="w-4 h-4" /> 
-                            : project.link.includes("youtu")
-                            ? <Youtube className="w-4 h-4" />
-                            : <ExternalLink className="w-4 h-4" />
-                          }
-                        </a>
-                      </Button>
-                    )}
+                    <div className="flex items-center gap-1">
+                      {(project.links ?? (project.link ? [{ url: project.link, label: "" }] : [])).map((item, i) => (
+                        <Button
+                          key={i}
+                          variant="ghost"
+                          size="icon"
+                          className="flex-shrink-0 hover:bg-primary/10 h-8 w-8"
+                          asChild
+                        >
+                          <a href={item.url} target="_blank" rel="noopener noreferrer">
+                            {item.url.includes("github.com")
+                              ? <Github className="w-4 h-4" />
+                              : item.url.includes("youtu")
+                              ? <Youtube className="w-4 h-4" />
+                              : <ExternalLink className="w-4 h-4" />
+                            }
+                          </a>
+                        </Button>
+                      ))}
+                    </div>
                   </div>
                   
                   <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">

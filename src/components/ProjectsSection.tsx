@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 export const ProjectsSection = () => {
   const featuredProjects = [
@@ -133,7 +133,10 @@ export const ProjectsSection = () => {
                         asChild
                       >
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4" />
+                          {project.link.includes("github.com") 
+                            ? <Github className="w-4 h-4" /> 
+                            : <ExternalLink className="w-4 h-4" />
+                          }
                         </a>
                       </Button>
                     )}

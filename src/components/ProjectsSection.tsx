@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Youtube } from "lucide-react";
 
 export const ProjectsSection = () => {
   const featuredProjects = [
@@ -82,7 +82,7 @@ export const ProjectsSection = () => {
       description: "Shopping application with various categories for men's and women's clothing, discounts, invoice history, and manager portal for product control.",
       technologies: ["C"],
       category: "E-Commerce",
-      link: "https://github.com/KShawpnil/Online-Shopping.git",
+      link: "https://youtu.be/EmghYWvr9aw?si=Z-ad2SxE0skXfalw",
     },
     {
       title: "Session Security and File Upload Security",
@@ -135,6 +135,8 @@ export const ProjectsSection = () => {
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
                           {project.link.includes("github.com") 
                             ? <Github className="w-4 h-4" /> 
+                            : project.link.includes("youtu")
+                            ? <Youtube className="w-4 h-4" />
                             : <ExternalLink className="w-4 h-4" />
                           }
                         </a>

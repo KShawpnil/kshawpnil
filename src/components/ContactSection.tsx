@@ -14,8 +14,9 @@ export const ContactSection = () => {
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -30,9 +31,26 @@ export const ContactSection = () => {
       toast.error("Please enter a valid email address");
       return;
     }
-    
-    toast.success("Message sent successfully!");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formspree.io/f/xgolzngr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -125,8 +143,8 @@ export const ContactSection = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="w-full" size="lg">
-                  Send Message
+                <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </Card>

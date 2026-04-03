@@ -76,6 +76,15 @@ export const AwardsSection = () => {
       link: "https://drive.google.com/file/d/1RR3lu-rpExWL09_D0JUwRZWKSNaCJ9Rp/view?usp=sharing",
       gradient: "from-accent/20 to-accent/5",
     },
+    {
+      icon: Award,
+      title: "Introduction to Artificial Intelligence",
+      organization: "Simplilearn",
+      period: "2022",
+      type: "certificate",
+      link: "https://drive.google.com/file/d/1Vqvm6tXBO8Tv2PLI2WEKHi8DbzRHkiM0/view?usp=drive_link",
+      gradient: "from-secondary/20 to-secondary/5",
+    },
   ];
 
   return (

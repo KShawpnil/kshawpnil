@@ -34,7 +34,7 @@ export const AwardsSection = () => {
     {
       icon: Trophy,
       title: "Finalist - Techkriti 2023 International Competition",
-      organization: "Indian Institute of Technology Kanpur, India",
+      organization: "Indian Institute of Technology (IIT), Kanpur, India",
       period: "2023",
       type: "competition",
       link: "https://drive.google.com/file/d/1s5izywClsBl9Uv_Zi_pic_UVYEQVzk3T/view?usp=sharing",

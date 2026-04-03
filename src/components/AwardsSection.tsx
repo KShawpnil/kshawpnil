@@ -58,6 +58,15 @@ export const AwardsSection = () => {
       link: "https://drive.google.com/file/d/1CFu70UGPLz3g745j7U_xXzjo5k_IGViV/view?usp=sharing",
       gradient: "from-secondary/15 to-secondary/5",
     },
+    {
+      icon: Award,
+      title: "Industrial Mentorship Program",
+      organization: "AKIJ iBOS",
+      period: "2025",
+      type: "certificate",
+      link: "https://drive.google.com/file/d/1UVdCURq0oRXSz9ikTUaSVf6QKhT3Y2G2/view?usp=sharing",
+      gradient: "from-primary/20 to-primary/5",
+    },
   ];
 
   return (

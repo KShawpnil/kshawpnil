@@ -67,6 +67,15 @@ export const AwardsSection = () => {
       link: "https://drive.google.com/file/d/1UVdCURq0oRXSz9ikTUaSVf6QKhT3Y2G2/view?usp=sharing",
       gradient: "from-primary/20 to-primary/5",
     },
+    {
+      icon: Award,
+      title: "Machine Learning using Python",
+      organization: "Simplilearn",
+      period: "2026",
+      type: "certificate",
+      link: "https://drive.google.com/file/d/1RR3lu-rpExWL09_D0JUwRZWKSNaCJ9Rp/view?usp=sharing",
+      gradient: "from-accent/20 to-accent/5",
+    },
   ];
 
   return (

@@ -39,6 +39,7 @@ export const Navbar = () => {
     { name: "Research", href: "#research", id: "research" },
     { name: "Publications", href: "#publications", id: "publications" },
     { name: "Projects", href: "#projects", id: "projects" },
+    { name: "Volunteer", href: "#volunteer", id: "volunteer" },
     { name: "Skills", href: "#skills", id: "skills" },
     { name: "Awards", href: "#awards", id: "awards" },
     { name: "Contact", href: "#contact", id: "contact" },

@@ -25,7 +25,8 @@ export const ExperienceSection = () => {
       organization: "Everyday E-Learning (YouTube)",
       location: "Dhaka, Bangladesh",
       period: "June 2021 - Present",
-      description: "• Developed educational content to simplify computer science concepts for diverse learners.\n• Promoted accessible and self-paced digital learning.",
+      description: "• Co-Founder and Instructor: Md Ulfat Tahsin\n• Developed educational content to simplify computer science concepts for diverse learners.\n• Promoted accessible and self-paced digital learning.",
+      coFounderLink: "https://ulfatt.lovable.app",
       type: "teaching",
       gradient: "from-secondary/20 to-secondary/5",
       link: "https://www.youtube.com/@EverydayELearning24",
@@ -136,6 +137,18 @@ export const ExperienceSection = () => {
                               {exp.description}
                             </p>
 
+                            {exp.coFounderLink && (
+                              <a 
+                                href={exp.coFounderLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors pt-2"
+                              >
+                                <ExternalLink className="w-4 h-4" />
+                                <span className="text-sm font-medium">Co-Founder and Instructor: Md Ulfat Tahsin</span>
+                              </a>
+                            )}
+                            
                             {exp.link && (
                               <a 
                                 href={exp.link} 

@@ -28,10 +28,7 @@ export const VolunteerSection = () => {
       ],
       supervisorName: "Laura Czuba",
       supervisorLink: "https://www.lauraczuba.com/",
-      points: [
-        "Contributing primarily to the technical and Human-Computer Interaction (HCI) aspects of the project.",
-        "Collaborating on the development of AI-assisted solutions aimed at supporting caregivers and enhancing user experience.",
-      ],
+      points: [],
       gradient: "from-primary/20 to-primary/5",
     },
     {

@@ -21,7 +21,7 @@ export const SkillsSection = () => {
     {
       icon: Database,
       title: "Databases",
-      skills: ["MySQL", "NoSQL", "Prisma", "Firebase"],
+      skills: ["MySQL", "NoSQL", "Prisma", "Firebase", "Supabase"],
       color: "accent",
       gradient: "from-accent/20 to-accent/5",
     },

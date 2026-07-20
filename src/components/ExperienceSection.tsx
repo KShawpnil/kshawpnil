@@ -137,6 +137,18 @@ export const ExperienceSection = () => {
                               {exp.description}
                             </p>
 
+                            {exp.coFounderLink && (
+                              <a 
+                                href={exp.coFounderLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors pt-2"
+                              >
+                                <ExternalLink className="w-4 h-4" />
+                                <span className="text-sm font-medium">Co-Founder and Instructor: Md Ulfat Tahsin</span>
+                              </a>
+                            )}
+                            
                             {exp.link && (
                               <a 
                                 href={exp.link} 

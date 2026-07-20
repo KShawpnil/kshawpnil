@@ -14,7 +14,7 @@ export const SkillsSection = () => {
     {
       icon: Layout,
       title: "Web Development",
-      skills: ["HTML", "CSS", "PHP", "JavaScript", "WordPress", "Laravel", "Next.js"],
+      skills: ["HTML", "CSS", "PHP", "JavaScript", "Laravel", "Next.js"],
       color: "secondary",
       gradient: "from-secondary/20 to-secondary/5",
     },
@@ -28,7 +28,7 @@ export const SkillsSection = () => {
     {
       icon: Wrench,
       title: "Tools & Software",
-      skills: ["Figma", "Canva", "JIRA", "Overleaf", "Git", "Cursor", "Lovable"],
+      skills: ["Figma", "Canva", "JIRA", "Overleaf", "Git", "Cursor", "Lovable", "WordPress"],
       color: "primary",
       gradient: "from-primary/15 to-primary/5",
     },

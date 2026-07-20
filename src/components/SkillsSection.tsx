@@ -28,7 +28,7 @@ export const SkillsSection = () => {
     {
       icon: Wrench,
       title: "Tools & Software",
-      skills: ["Figma", "Canva", "JIRA", "Overleaf", "Git"],
+      skills: ["Figma", "Canva", "JIRA", "Overleaf", "Git", "Cursor", "Lovable"],
       color: "primary",
       gradient: "from-primary/15 to-primary/5",
     },

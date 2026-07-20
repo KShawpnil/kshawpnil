@@ -124,7 +124,15 @@ export const ResearchSection = () => {
                   
                   <div className="pt-2 border-t border-border/50">
                     <p className="text-sm text-muted-foreground">
-                      <span className="font-semibold text-foreground">Supervisor:</span> Dr. Suman Ahmmed, Head and Associate Professor, Department of Computer Science and Engineering
+                      <span className="font-semibold text-foreground">Supervisor:</span>{" "}
+                      <a
+                        href="https://cse.uiu.ac.bd/faculty/suman"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-secondary hover:underline"
+                      >
+                        Dr. Suman Ahmmed, Head and Associate Professor, Department of Computer Science and Engineering
+                      </a>
                     </p>
                   </div>
                 </div>

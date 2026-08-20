@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Youtube, MapPin, Calendar, ChevronDown, ExternalLink } from "lucide-react";
+import { Briefcase, GraduationCap, Youtube, MapPin, Calendar, ChevronDown, ExternalLink, Heart } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -19,6 +19,34 @@ export const ExperienceSection = () => {
   };
 
   const experiences = [
+    {
+      icon: Heart,
+      title: "Full-Stack IoT & AI System (Volunteer)",
+      organization: (
+        <>
+          The Caregiver Artificial Intelligence Prize Challenge, Powered by the{" "}
+          <a
+            href="https://acl.gov/caregiver-ai-competition"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 transition-colors font-medium"
+          >
+            Administration for Community Living (ACL)
+          </a>
+        </>
+      ),
+      projectName: "Hearth Care AI",
+      location: "Columbus, Ohio, USA",
+      period: "May 2026 - Aug 2026",
+      projectDescription: [
+        "Developed the full-stack software backend connecting a Raspberry Pi 5 IoT device to role-based web and mobile applications with real-time database sync and LLM-powered AI summarization.",
+        "Developed the embedded hardware backend for a custom Raspberry Pi 5 IoT device including WebRTC video calling, voice activation, speech transcription.",
+      ],
+      supervisorName: "Laura Czuba",
+      supervisorLink: "https://www.lauraczuba.com/",
+      type: "work",
+      gradient: "from-primary/20 to-primary/5",
+    },
     {
       icon: Youtube,
       title: "Founder & Instructor",
@@ -122,6 +150,12 @@ export const ExperienceSection = () => {
                             {exp.organization}
                           </p>
                           
+                          {exp.projectName && (
+                            <p className="text-foreground font-semibold text-base mt-1">
+                              {exp.projectName}
+                            </p>
+                          )}
+                          
                           <CollapsibleContent className="space-y-3 animate-accordion-down">
                             <div className="flex items-center gap-2 text-muted-foreground">
                               <Calendar className="w-4 h-4" />
@@ -133,10 +167,36 @@ export const ExperienceSection = () => {
                               <span className="text-sm">{exp.location}</span>
                             </div>
                             
-                            <p className="text-muted-foreground pt-2 whitespace-pre-line">
-                              {exp.description}
-                            </p>
+                            {exp.description && (
+                              <p className="text-muted-foreground pt-2 whitespace-pre-line">
+                                {exp.description}
+                              </p>
+                            )}
+                            
+                            {exp.projectDescription && (
+                              <ul className="space-y-2 list-disc list-outside pl-5 pt-2">
+                                {exp.projectDescription.map((point, i) => (
+                                  <li key={i} className="text-sm text-muted-foreground leading-relaxed">
+                                    {point}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
 
+                            {exp.supervisorName && (
+                              <p className="text-sm text-muted-foreground leading-relaxed pt-2">
+                                Supervisor:{" "}
+                                <a
+                                  href={exp.supervisorLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary hover:text-primary/80 transition-colors font-medium"
+                                >
+                                  {exp.supervisorName}
+                                </a>
+                              </p>
+                            )}
+                            
                             {exp.coFounderLink && (
                               <a 
                                 href={exp.coFounderLink} 

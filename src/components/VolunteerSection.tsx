@@ -1,36 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Users, BookOpen, Lightbulb, Share2, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { Users, BookOpen, Lightbulb, Share2, ClipboardCheck, ShieldCheck } from "lucide-react";
 
 export const VolunteerSection = () => {
   const activities = [
-    {
-      icon: Heart,
-      role: "Full-Stack IoT & AI System",
-      projectName: "Hearth Care AI",
-      period: "2026",
-      organization: (
-        <>
-          The Caregiver Artificial Intelligence Prize Challenge, Powered by the{" "}
-          <a
-            href="https://acl.gov/caregiver-ai-competition"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline font-medium"
-          >
-            Administration for Community Living (ACL)
-          </a>
-        </>
-      ),
-      projectDescription: [
-        "Developed the full-stack software backend connecting a Raspberry Pi 5 IoT device to role-based web and mobile applications with real-time database sync and LLM-powered AI summarization.",
-        "Developed the embedded hardware backend for a custom Raspberry Pi 5 IoT device including WebRTC video calling, voice activation, speech transcription.",
-      ],
-      supervisorName: "Laura Czuba",
-      supervisorLink: "https://www.lauraczuba.com/",
-      points: [],
-      gradient: "from-primary/20 to-primary/5",
-    },
     {
       icon: BookOpen,
       role: "Reviewer",
@@ -138,36 +111,9 @@ export const VolunteerSection = () => {
                           <h3 className="font-serif text-lg md:text-xl font-bold text-foreground leading-tight group-hover:text-accent transition-colors">
                             {item.role}
                           </h3>
-                          {item.projectName && (
-                            <p className="text-foreground font-semibold text-sm leading-relaxed mt-1">
-                              {item.projectName}
-                            </p>
-                          )}
                           <p className="text-muted-foreground text-sm leading-relaxed mt-2">
                             {item.organization}
                           </p>
-                          {item.projectDescription && (
-                            <ul className="space-y-2 list-disc list-outside pl-5 mt-3">
-                              {item.projectDescription.map((point, i) => (
-                                <li key={i} className="text-sm text-muted-foreground leading-relaxed">
-                                  {point}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                          {item.supervisorName && (
-                            <p className="text-sm text-muted-foreground leading-relaxed mt-3">
-                              Supervisor:{" "}
-                              <a
-                                href={item.supervisorLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-accent hover:underline font-medium"
-                              >
-                                {item.supervisorName}
-                              </a>
-                            </p>
-                          )}
                         </div>
 
                         <ul className="space-y-2 list-disc list-outside pl-5">

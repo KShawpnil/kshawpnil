@@ -111,36 +111,9 @@ export const VolunteerSection = () => {
                           <h3 className="font-serif text-lg md:text-xl font-bold text-foreground leading-tight group-hover:text-accent transition-colors">
                             {item.role}
                           </h3>
-                          {item.projectName && (
-                            <p className="text-foreground font-semibold text-sm leading-relaxed mt-1">
-                              {item.projectName}
-                            </p>
-                          )}
                           <p className="text-muted-foreground text-sm leading-relaxed mt-2">
                             {item.organization}
                           </p>
-                          {item.projectDescription && (
-                            <ul className="space-y-2 list-disc list-outside pl-5 mt-3">
-                              {item.projectDescription.map((point, i) => (
-                                <li key={i} className="text-sm text-muted-foreground leading-relaxed">
-                                  {point}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                          {item.supervisorName && (
-                            <p className="text-sm text-muted-foreground leading-relaxed mt-3">
-                              Supervisor:{" "}
-                              <a
-                                href={item.supervisorLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-accent hover:underline font-medium"
-                              >
-                                {item.supervisorName}
-                              </a>
-                            </p>
-                          )}
                         </div>
 
                         <ul className="space-y-2 list-disc list-outside pl-5">

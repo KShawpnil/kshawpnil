@@ -138,10 +138,10 @@ export const ProjectsSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Undergraduate Projects
+              Project Works
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              A comprehensive collection of 13 undergraduate projects showcasing expertise across IoT, AI, web development, embedded systems, and software engineering
+              A comprehensive collection of 14 project works showcasing expertise across IoT, AI, web development, embedded systems, and software engineering
             </p>
           </div>
           
@@ -181,14 +181,53 @@ export const ProjectsSection = () => {
                   </div>
                   
                   <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
+                    {project.titleParts ? (
+                      <>
+                        {project.titleParts.before}
+                        <a
+                          href={project.titleParts.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          {project.titleParts.linkText}
+                        </a>
+                        {project.titleParts.after}
+                      </>
+                    ) : (
+                      project.title
+                    )}
                   </h3>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
-                    {project.description}
-                  </p>
+                  {project.bulletPoints ? (
+                    <ul className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 list-disc list-inside space-y-1.5">
+                      {project.bulletPoints.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                      {project.description}
+                    </p>
+                  )}
                   
                   <div className="space-y-3">
+                    {project.coAuthor && (
+                      <div className="flex items-start gap-2 p-3 bg-primary/10 rounded-lg border border-primary/20">
+                        <p className="text-xs text-foreground font-medium leading-relaxed">
+                          Co-Author:{" "}
+                          <a
+                            href={project.coAuthor.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            {project.coAuthor.name}
+                          </a>
+                        </p>
+                      </div>
+                    )}
+                    
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.slice(0, 3).map((tech, techIndex) => (
                         <span 

@@ -1,36 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Users, BookOpen, Lightbulb, Share2, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { Users, BookOpen, Lightbulb, Share2, ClipboardCheck, ShieldCheck } from "lucide-react";
 
 export const VolunteerSection = () => {
   const activities = [
-    {
-      icon: Heart,
-      role: "Full-Stack IoT & AI System",
-      projectName: "Hearth Care AI",
-      period: "2026",
-      organization: (
-        <>
-          The Caregiver Artificial Intelligence Prize Challenge, Powered by the{" "}
-          <a
-            href="https://acl.gov/caregiver-ai-competition"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline font-medium"
-          >
-            Administration for Community Living (ACL)
-          </a>
-        </>
-      ),
-      projectDescription: [
-        "Developed the full-stack software backend connecting a Raspberry Pi 5 IoT device to role-based web and mobile applications with real-time database sync and LLM-powered AI summarization.",
-        "Developed the embedded hardware backend for a custom Raspberry Pi 5 IoT device including WebRTC video calling, voice activation, speech transcription.",
-      ],
-      supervisorName: "Laura Czuba",
-      supervisorLink: "https://www.lauraczuba.com/",
-      points: [],
-      gradient: "from-primary/20 to-primary/5",
-    },
     {
       icon: BookOpen,
       role: "Reviewer",

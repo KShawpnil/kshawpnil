@@ -6,13 +6,35 @@ import { ExternalLink, Github, Youtube } from "lucide-react";
 export const ProjectsSection = () => {
   const featuredProjects: {
     title: string;
-    description: string;
+    titleParts?: { before: string; linkText: string; after: string; url: string };
+    description?: string;
+    bulletPoints?: string[];
     technologies: string[];
     achievement?: string;
+    coAuthor?: { name: string; url: string };
     category: string;
     link?: string;
     links?: { url: string; label: string }[];
   }[] = [
+    {
+      title: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at WiML Workshop by NeurIPS 2026)",
+      titleParts: {
+        before: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at ",
+        linkText: "WiML Workshop @ NeurIPS 2026",
+        after: ")",
+        url: "https://wimlworkshop.org/",
+      },
+      bulletPoints: [
+        "Learning from Demonstration (LfD), a structured six-stage process designed to train a Machine Learning (ML) agent using Reinforcement Learning to perform metal forming tasks by observing YouTube video demonstrations of skilled blacksmiths.",
+        "The research objective was to apply imitation learning methods from ML to the problem of automating metal forming knowledge in manufacturing engineering.",
+      ],
+      coAuthor: {
+        name: "Md Ulfat Tahsin",
+        url: "https://ulfatt.lovable.app/",
+      },
+      technologies: ["Machine Learning", "Reinforcement Learning", "Imitation Learning", "Python"],
+      category: "Research & AI",
+    },
     {
       title: "Automating Systems for Smart Households",
       description: "An IoT integrated automated system enabling physically challenged individuals to navigate their homes with monitoring capabilities for family members.",
@@ -116,10 +138,10 @@ export const ProjectsSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Undergraduate Projects
+              Project Works
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              A comprehensive collection of 13 undergraduate projects showcasing expertise across IoT, AI, web development, embedded systems, and software engineering
+              A comprehensive collection of 14 project works showcasing expertise across IoT, AI, web development, embedded systems, and software engineering
             </p>
           </div>
           
@@ -159,14 +181,53 @@ export const ProjectsSection = () => {
                   </div>
                   
                   <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
+                    {project.titleParts ? (
+                      <>
+                        {project.titleParts.before}
+                        <a
+                          href={project.titleParts.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          {project.titleParts.linkText}
+                        </a>
+                        {project.titleParts.after}
+                      </>
+                    ) : (
+                      project.title
+                    )}
                   </h3>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
-                    {project.description}
-                  </p>
+                  {project.bulletPoints ? (
+                    <ul className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 list-disc list-inside space-y-1.5">
+                      {project.bulletPoints.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                      {project.description}
+                    </p>
+                  )}
                   
                   <div className="space-y-3">
+                    {project.coAuthor && (
+                      <div className="flex items-start gap-2 p-3 bg-primary/10 rounded-lg border border-primary/20">
+                        <p className="text-xs text-foreground font-medium leading-relaxed">
+                          Co-Author:{" "}
+                          <a
+                            href={project.coAuthor.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            {project.coAuthor.name}
+                          </a>
+                        </p>
+                      </div>
+                    )}
+                    
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.slice(0, 3).map((tech, techIndex) => (
                         <span 

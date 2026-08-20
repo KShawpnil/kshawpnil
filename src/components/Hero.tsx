@@ -123,9 +123,7 @@ export const Hero = () => {
 
               {/* Description */}
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
-                I design evidence-based, human-centered solutions to improve how students learn engineering. 
-                My work bridges <span className="text-primary font-semibold">HCI</span> and <span className="text-accent font-semibold">AI in Healthcare</span>, 
-                creating accessible technologies for diverse user groups.
+                My work bridges <span className="text-primary font-semibold">Machine Learning</span>, <span className="text-accent font-semibold">HCI</span> and <span className="text-secondary font-semibold">AI in Healthcare</span>, creating accessible technologies for diverse user groups.
               </p>
 
               {/* Social Links */}

@@ -6,13 +6,35 @@ import { ExternalLink, Github, Youtube } from "lucide-react";
 export const ProjectsSection = () => {
   const featuredProjects: {
     title: string;
-    description: string;
+    titleParts?: { before: string; linkText: string; after: string; url: string };
+    description?: string;
+    bulletPoints?: string[];
     technologies: string[];
     achievement?: string;
+    coAuthor?: { name: string; url: string };
     category: string;
     link?: string;
     links?: { url: string; label: string }[];
   }[] = [
+    {
+      title: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at WiML Workshop by NeurIPS 2026)",
+      titleParts: {
+        before: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at ",
+        linkText: "WiML Workshop @ NeurIPS 2026",
+        after: ")",
+        url: "https://wimlworkshop.org/",
+      },
+      bulletPoints: [
+        "Learning from Demonstration (LfD), a structured six-stage process designed to train a Machine Learning (ML) agent using Reinforcement Learning to perform metal forming tasks by observing YouTube video demonstrations of skilled blacksmiths.",
+        "The research objective was to apply imitation learning methods from ML to the problem of automating metal forming knowledge in manufacturing engineering.",
+      ],
+      coAuthor: {
+        name: "Md Ulfat Tahsin",
+        url: "https://ulfatt.lovable.app/",
+      },
+      technologies: ["Machine Learning", "Reinforcement Learning", "Imitation Learning", "Python"],
+      category: "Research & AI",
+    },
     {
       title: "Automating Systems for Smart Households",
       description: "An IoT integrated automated system enabling physically challenged individuals to navigate their homes with monitoring capabilities for family members.",

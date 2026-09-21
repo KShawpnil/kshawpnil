@@ -17,9 +17,8 @@ export const ProjectsSection = () => {
   }[] = [
     {
       title: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations",
-      bulletPoints: [
-        "Learning from Demonstration (LfD), a structured six-stage process designed to train a Machine Learning (ML) agent using Reinforcement Learning to perform metal forming tasks by observing YouTube video demonstrations of skilled blacksmiths.",
-      ],
+      description:
+        "Learning from Demonstration (LfD), a structured six-stage process designed to train an ML agent using Reinforcement Learning to perform metal forming tasks by observing YouTube video demonstrations of skilled blacksmiths.",
       coAuthor: {
         name: "Md Ulfat Tahsin",
         url: "https://ulfatt.lovable.app/",

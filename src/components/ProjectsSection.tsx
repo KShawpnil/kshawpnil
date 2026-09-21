@@ -17,23 +17,16 @@ export const ProjectsSection = () => {
     links?: { url: string; label: string }[];
   }[] = [
     {
-      title: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at WiML Workshop by NeurIPS 2026)",
-      titleParts: {
-        before: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at ",
-        linkText: "WiML Workshop @ NeurIPS 2026",
-        after: ")",
-        url: "https://wimlworkshop.org/",
-      },
+      title: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations",
       bulletPoints: [
         "Learning from Demonstration (LfD), a structured six-stage process designed to train a Machine Learning (ML) agent using Reinforcement Learning to perform metal forming tasks by observing YouTube video demonstrations of skilled blacksmiths.",
-        "The research objective was to apply imitation learning methods from ML to the problem of automating metal forming knowledge in manufacturing engineering.",
       ],
       coAuthor: {
         name: "Md Ulfat Tahsin",
         url: "https://ulfatt.lovable.app/",
       },
       technologies: ["Machine Learning", "Reinforcement Learning", "Imitation Learning", "Python"],
-      category: "Research & AI",
+      category: "Research & ML",
     },
     {
       title: "Automating Systems for Smart Households",

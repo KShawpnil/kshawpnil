@@ -6,7 +6,6 @@ import { ExternalLink, Github, Youtube } from "lucide-react";
 export const ProjectsSection = () => {
   const featuredProjects: {
     title: string;
-    titleParts?: { before: string; linkText: string; after: string; url: string };
     description?: string;
     bulletPoints?: string[];
     technologies: string[];

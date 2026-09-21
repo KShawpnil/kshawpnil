@@ -6,7 +6,6 @@ import { ExternalLink, Github, Youtube } from "lucide-react";
 export const ProjectsSection = () => {
   const featuredProjects: {
     title: string;
-    titleParts?: { before: string; linkText: string; after: string; url: string };
     description?: string;
     bulletPoints?: string[];
     technologies: string[];
@@ -17,23 +16,16 @@ export const ProjectsSection = () => {
     links?: { url: string; label: string }[];
   }[] = [
     {
-      title: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at WiML Workshop by NeurIPS 2026)",
-      titleParts: {
-        before: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations (In-Review at ",
-        linkText: "WiML Workshop @ NeurIPS 2026",
-        after: ")",
-        url: "https://wimlworkshop.org/",
-      },
+      title: "LfD for Manufacturing Tasks: A Workpiece-Geometry-First Pipeline Trained on YouTube Video Demonstrations",
       bulletPoints: [
         "Learning from Demonstration (LfD), a structured six-stage process designed to train a Machine Learning (ML) agent using Reinforcement Learning to perform metal forming tasks by observing YouTube video demonstrations of skilled blacksmiths.",
-        "The research objective was to apply imitation learning methods from ML to the problem of automating metal forming knowledge in manufacturing engineering.",
       ],
       coAuthor: {
         name: "Md Ulfat Tahsin",
         url: "https://ulfatt.lovable.app/",
       },
       technologies: ["Machine Learning", "Reinforcement Learning", "Imitation Learning", "Python"],
-      category: "Research & AI",
+      category: "Research & ML",
     },
     {
       title: "Automating Systems for Smart Households",
@@ -181,22 +173,7 @@ export const ProjectsSection = () => {
                   </div>
                   
                   <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">
-                    {project.titleParts ? (
-                      <>
-                        {project.titleParts.before}
-                        <a
-                          href={project.titleParts.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline"
-                        >
-                          {project.titleParts.linkText}
-                        </a>
-                        {project.titleParts.after}
-                      </>
-                    ) : (
-                      project.title
-                    )}
+                    {project.title}
                   </h3>
                   
                   {project.bulletPoints ? (

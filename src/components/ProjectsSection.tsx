@@ -173,22 +173,7 @@ export const ProjectsSection = () => {
                   </div>
                   
                   <h3 className="font-serif text-lg font-bold text-foreground leading-tight mb-3 group-hover:text-primary transition-colors">
-                    {project.titleParts ? (
-                      <>
-                        {project.titleParts.before}
-                        <a
-                          href={project.titleParts.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline"
-                        >
-                          {project.titleParts.linkText}
-                        </a>
-                        {project.titleParts.after}
-                      </>
-                    ) : (
-                      project.title
-                    )}
+                    {project.title}
                   </h3>
                   
                   {project.bulletPoints ? (
